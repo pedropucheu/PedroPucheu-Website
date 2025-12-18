@@ -2067,6 +2067,88 @@ body.loading-complete .section {
 }
 
 /* ============================================
+   CINEMATIC ANIMATED BACKGROUND
+   ============================================ */
+.cinematic-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(120, 20, 20, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 80% 60%, rgba(80, 10, 10, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 50% 100%, rgba(100, 15, 15, 0.35) 0%, transparent 40%);
+  animation: cinematicFlow 15s ease-in-out infinite;
+  z-index: 0;
+}
+
+.cinematic-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 70% at 70% 30%, rgba(150, 30, 30, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 30% 70%, rgba(90, 15, 15, 0.3) 0%, transparent 50%);
+  animation: cinematicFlow2 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+.cinematic-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes cinematicFlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(2%, -2%) scale(1.05);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-1%, 1%) scale(1.02);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(1%, 2%) scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+@keyframes cinematicFlow2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1.05);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(-2%, 1%) scale(1);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(1%, -1%) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Subtle version for lighter sections */
+.cinematic-bg-subtle::before {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(120, 20, 20, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 60% at 80% 60%, rgba(80, 10, 10, 0.1) 0%, transparent 50%);
+}
+
+.cinematic-bg-subtle::after {
+  background:
+    radial-gradient(ellipse 70% 70% at 70% 30%, rgba(150, 30, 30, 0.1) 0%, transparent 50%);
+}
+
+/* ============================================
    SELECTED PROJECTS SECTION
    ============================================ */
 .selected-projects {
