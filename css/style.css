@@ -880,6 +880,86 @@ h1, h2, h3, h4, h5, h6 {
   resize: vertical;
 }
 
+/* Custom Select */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--color-bg-tertiary);
+  border: 1px solid transparent;
+  padding: 0.9rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.custom-select-trigger:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-select.open .custom-select-trigger {
+  border-color: var(--color-text-muted);
+}
+
+.custom-select-trigger i {
+  font-size: 0.7rem;
+  transition: var(--transition-fast);
+}
+
+.custom-select.open .custom-select-trigger i {
+  transform: rotate(180deg);
+}
+
+.custom-select-trigger.selected {
+  color: var(--color-text-primary);
+}
+
+.custom-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition-fast);
+}
+
+.custom-select.open .custom-select-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-select-option {
+  padding: 0.9rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.custom-select-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
+}
+
+.custom-select-option.selected {
+  color: var(--color-text-primary);
+}
+
 /* ============================================
    FOOTER
    ============================================ */

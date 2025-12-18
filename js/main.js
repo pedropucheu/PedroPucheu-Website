@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initVideoPlayers();
   initContactForm();
+  initCustomSelect();
 });
 
 // ============================================
@@ -673,5 +674,62 @@ function initCustomCursor() {
 
 // Uncomment to enable custom cursor:
 // initCustomCursor();
+
+// ============================================
+// Custom Select
+// ============================================
+function initCustomSelect() {
+  const customSelects = document.querySelectorAll('.custom-select');
+
+  customSelects.forEach(function(select) {
+    const trigger = select.querySelector('.custom-select-trigger');
+    const options = select.querySelectorAll('.custom-select-option');
+    const hiddenInput = select.querySelector('input[type="hidden"]');
+    const triggerText = trigger.querySelector('span');
+
+    // Toggle dropdown
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+
+      // Close other selects
+      customSelects.forEach(function(s) {
+        if (s !== select) s.classList.remove('open');
+      });
+
+      select.classList.toggle('open');
+    });
+
+    // Select option
+    options.forEach(function(option) {
+      option.addEventListener('click', function() {
+        const value = this.dataset.value;
+        const text = this.textContent;
+
+        // Update hidden input
+        hiddenInput.value = value;
+
+        // Update trigger text
+        triggerText.textContent = text;
+        trigger.classList.add('selected');
+
+        // Update selected state
+        options.forEach(function(opt) {
+          opt.classList.remove('selected');
+        });
+        this.classList.add('selected');
+
+        // Close dropdown
+        select.classList.remove('open');
+      });
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function() {
+    customSelects.forEach(function(select) {
+      select.classList.remove('open');
+    });
+  });
+}
 
 console.log('Pedro Pucheu Portfolio - Loaded Successfully');
