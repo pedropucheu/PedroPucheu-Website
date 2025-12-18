@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pedro Pucheu - London based Filmmaker and Photographer. Creating compelling visual stories through short films, documentaries, and commercials.">
+  <meta name="keywords" content="filmmaker, photographer, London, cinematographer, video production, documentary, short film">
+  <meta name="author" content="Pedro Pucheu">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pedro Pucheu | Filmmaker & Photographer">
+  <meta property="og:description" content="London based filmmaker and photographer, creating compelling visual stories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pedropucheu.co.uk">
+
+  <title>Pedro Pucheu | Filmmaker & Photographer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="motion.html" class="nav-link">Motion</a></li>
+        <li><a href="stills.html" class="nav-link">Stills</a></li>
+        <li><a href="fighting-productions.html" class="nav-link">Fighting Productions</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-video-container">
+      <!-- Replace with actual showreel video -->
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+        <source src="assets/videos/showreel.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-subtitle">Filmmaker / Photographer</p>
+      <h1 class="hero-title">Pedro<br>Pucheu</h1>
+      <p class="hero-description">London based filmmaker and photographer, creating compelling visual stories through short films, documentaries, and commercials.</p>
+      <div class="hero-cta">
+        <a href="#showreel" class="btn btn-primary">
+          <i class="fas fa-play"></i> Watch Showreel
+        </a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Showreel Section -->
+  <section class="section" id="showreel">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Showreel 2023</h2>
+        <p class="section-description">A curated collection of my best work from the past year.</p>
+      </div>
+
+      <div class="video-container">
+        <!-- Replace with actual Vimeo/YouTube embed -->
+        <iframe
+          src="https://player.vimeo.com/video/YOUR_SHOWREEL_ID?title=0&byline=0&portrait=0"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section class="section section-dark" id="work">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-description">Selected projects showcasing storytelling through motion and stills.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Featured Project -->
+        <a href="projects/yan-texeira.html" class="project-card project-featured fade-in">
+          <img src="assets/images/yan-texeira-thumb.jpg" alt="Yan Texeira Documentary" class="project-card-image">
+          <div class="project-card-overlay">
+            <span class="project-card-category">Short Documentary</span>
+            <h3 class="project-card-title">Yan Texeira</h3>
+            <p class="project-card-role">Produced / Directed / Shot / Edited</p>
+          </div>
+          <button class="btn-play project-card-play" aria-label="Play video"></button>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="projects/celebration-of-life.html" class="project-card fade-in">
+          <img src="assets/images/celebration-thumb.jpg" alt="A Celebration of Life" class="project-card-image">
+          <div class="project-card-overlay">
+            <span class="project-card-category">Short Film</span>
+            <h3 class="project-card-title">A Celebration of Life</h3>
+            <p class="project-card-role">Written / Produced / Directed / Shot / Edited</p>
+          </div>
+          <button class="btn-play project-card-play" aria-label="Play video"></button>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="projects/unknown-reality.html" class="project-card fade-in">
+          <img src="assets/images/unknown-reality-thumb.jpg" alt="An Unknown Reality" class="project-card-image">
+          <div class="project-card-overlay">
+            <span class="project-card-category">Short Film</span>
+            <h3 class="project-card-title">An Unknown Reality</h3>
+            <p class="project-card-role">Written / Produced / Directed / Shot / Edited</p>
+          </div>
+          <button class="btn-play project-card-play" aria-label="Play video"></button>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="projects/homegrown.html" class="project-card fade-in">
+          <img src="assets/images/homegrown-thumb.jpg" alt="Homegrown" class="project-card-image">
+          <div class="project-card-overlay">
+            <span class="project-card-category">Branded Content</span>
+            <h3 class="project-card-title">Homegrown</h3>
+            <p class="project-card-role">Produced / Directed / Shot / Edited</p>
+          </div>
+          <button class="btn-play project-card-play" aria-label="Play video"></button>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="projects/community.html" class="project-card fade-in">
+          <img src="assets/images/community-thumb.jpg" alt="Community" class="project-card-image">
+          <div class="project-card-overlay">
+            <span class="project-card-category">Short Film</span>
+            <h3 class="project-card-title">Community</h3>
+            <p class="project-card-role">Director of Photography</p>
+          </div>
+          <button class="btn-play project-card-play" aria-label="Play video"></button>
+        </a>
+      </div>
+
+      <div class="text-center mt-lg">
+        <a href="motion.html" class="btn btn-outline">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in">
+          <img src="assets/images/pedro-portrait.jpg" alt="Pedro Pucheu - Filmmaker">
+        </div>
+
+        <div class="about-content fade-in">
+          <h2 class="section-title">About Me</h2>
+          <p class="about-text">
+            London based filmmaker and photographer, looking to work with brands and collaborate with other artists. I believe in the power of visual storytelling to create meaningful connections and evoke emotion.
+          </p>
+          <p class="about-text">
+            My approach combines cinematic techniques with authentic storytelling, whether through short films, documentaries, or commercials. Every project is an opportunity to craft a unique visual narrative that resonates with audiences.
+          </p>
+          <p class="about-text">
+            Feel free to follow my work and get in contact!
+          </p>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="about-stat-number">5+</div>
+              <div class="about-stat-label">Film Projects</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-number">3</div>
+              <div class="about-stat-label">Photography Categories</div>
+            </div>
+          </div>
+
+          <div class="mt-md">
+            <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section section-dark" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What I Do</h2>
+        <p class="section-description">Comprehensive visual storytelling services for brands and artists.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="service-title">Short Films</h3>
+          <p class="service-description">Narrative-driven short films that explore meaningful themes and connect with audiences on an emotional level.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="service-title">Documentaries</h3>
+          <p class="service-description">Authentic documentary storytelling that shines a light on compelling subjects and real-world stories.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="service-title">Commercials</h3>
+          <p class="service-description">Brand content that creates powerful connections between businesses and their target audiences.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">Professional photography including portraits, food styling, and fashion/clothing work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stills Preview -->
+  <section class="section" id="stills-preview">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Photography</h2>
+        <p class="section-description">A selection of still work across portraits, food, and clothing.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <img src="assets/images/stills/portrait-1.jpg" alt="Portrait Photography">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-icon">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="assets/images/stills/food-1.jpg" alt="Food Photography">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-icon">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="assets/images/stills/clothing-1.jpg" alt="Clothing Photography">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-icon">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="assets/images/stills/portrait-2.jpg" alt="Portrait Photography">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-icon">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-lg">
+        <a href="stills.html" class="btn btn-outline">View All Photography</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="display-title">Let's Create<br>Together</h2>
+        <p class="section-description mt-md mb-lg" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+          Have a project in mind? Looking to collaborate? I'd love to hear from you and discuss how we can bring your vision to life.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-envelope"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">PEDRO PUCHEU</div>
+
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="motion.html">Motion</a></li>
+          <li><a href="stills.html">Stills</a></li>
+          <li><a href="fighting-productions.html">Fighting Productions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:pedropucheu@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pedro Pucheu. All rights reserved. | London, UK</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img src="" alt="" id="lightboxImage">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

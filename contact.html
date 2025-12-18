@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Pedro Pucheu - London based Filmmaker and Photographer. Get in touch for collaborations, projects, and inquiries.">
+  <title>Contact | Pedro Pucheu</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="motion.html" class="nav-link">Motion</a></li>
+        <li><a href="stills.html" class="nav-link">Stills</a></li>
+        <li><a href="fighting-productions.html" class="nav-link">Fighting Productions</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 150px;">
+    <div class="container">
+      <div class="section-header">
+        <p class="hero-subtitle">Get in Touch</p>
+        <h1 class="display-title">Contact</h1>
+        <p class="section-description">London based filmmaker and photographer, looking to work with brands and collaborate with other artists. Feel free to follow my work and get in contact!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <h2 class="section-title">Let's Create Together</h2>
+          <p class="about-text">
+            Whether you have a project in mind, want to collaborate, or just want to say hello—I'd love to hear from you. I'm always open to new opportunities and creative partnerships.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">
+                <a href="mailto:pedropucheu@gmail.com">pedropucheu@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">London, United Kingdom</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div>
+              <div class="contact-item-label">Available For</div>
+              <div class="contact-item-value">Freelance & Collaborations</div>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--space-md); margin-bottom: var(--space-sm); font-size: 1.1rem;">Follow My Work</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="Vimeo">
+              <i class="fab fa-vimeo-v"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form fade-in">
+          <h3 style="margin-bottom: var(--space-md); font-family: var(--font-heading);">Send a Message</h3>
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <select id="subject" name="subject" class="form-input" required>
+                <option value="">Select a subject</option>
+                <option value="Film Project">Film Project</option>
+                <option value="Photography Project">Photography Project</option>
+                <option value="Commercial/Brand Work">Commercial/Brand Work</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" required placeholder="Tell me about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Explore My Work</h2>
+      </div>
+
+      <div class="services-grid">
+        <a href="motion.html" class="service-card fade-in" style="text-decoration: none;">
+          <div class="service-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="service-title">Motion Showcase</h3>
+          <p class="service-description">View my film and video work including documentaries, short films, and branded content.</p>
+        </a>
+
+        <a href="stills.html" class="service-card fade-in" style="text-decoration: none;">
+          <div class="service-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="service-title">Photography</h3>
+          <p class="service-description">Browse my photography portfolio featuring portraits, food, and fashion work.</p>
+        </a>
+
+        <a href="fighting-productions.html" class="service-card fade-in" style="text-decoration: none;">
+          <div class="service-icon">
+            <i class="fas fa-fist-raised"></i>
+          </div>
+          <h3 class="service-title">Fighting Productions</h3>
+          <p class="service-description">Learn about our video production company specializing in combat sports content.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">PEDRO PUCHEU</div>
+
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="motion.html">Motion</a></li>
+          <li><a href="stills.html">Stills</a></li>
+          <li><a href="fighting-productions.html">Fighting Productions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:pedropucheu@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pedro Pucheu. All rights reserved. | London, UK</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fighting Productions Ltd - Video production company specializing in combat sports content. Founded by Pedro Pucheu and Andrew Cleminson.">
+  <title>Fighting Productions Ltd | Pedro Pucheu</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .fp-hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-bg-primary);
+      overflow: hidden;
+    }
+
+    .fp-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('assets/images/fighting-productions-bg.jpg') center/cover no-repeat;
+      opacity: 0.2;
+      filter: grayscale(100%);
+    }
+
+    .fp-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: var(--space-md);
+    }
+
+    .fp-logo {
+      max-width: 400px;
+      margin-bottom: var(--space-md);
+    }
+
+    .fp-logo-text {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: 0.02em;
+      color: var(--color-text-primary);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+    }
+
+    .fp-logo-text span {
+      color: var(--color-text-primary);
+    }
+
+    .fp-tagline {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      margin-bottom: var(--space-md);
+    }
+
+    .fp-description {
+      max-width: 500px;
+      margin: 0 auto;
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .founders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    .founder-card {
+      text-align: center;
+    }
+
+    .founder-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: var(--space-sm);
+      border: 1px solid rgba(255,255,255,0.1);
+      filter: grayscale(100%);
+      transition: var(--transition-medium);
+    }
+
+    .founder-card:hover .founder-image {
+      filter: grayscale(50%);
+    }
+
+    .founder-name {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: var(--space-xs);
+    }
+
+    .founder-role {
+      color: var(--color-text-muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .client-types {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+
+    .client-type {
+      text-align: center;
+    }
+
+    .client-type-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--color-bg-tertiary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-sm);
+      font-size: 1.2rem;
+      color: var(--color-text-secondary);
+      transition: var(--transition-medium);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .client-type:hover .client-type-icon {
+      background: var(--color-text-primary);
+      color: var(--color-bg-primary);
+    }
+
+    .client-type-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-text-secondary);
+    }
+
+    .philosophy-quote {
+      font-family: var(--font-body);
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 300;
+      font-style: italic;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--color-text-secondary);
+      position: relative;
+      padding: var(--space-md) var(--space-lg);
+      line-height: 1.9;
+    }
+
+    .philosophy-quote::before,
+    .philosophy-quote::after {
+      content: '';
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="motion.html" class="nav-link">Motion</a></li>
+        <li><a href="stills.html" class="nav-link">Stills</a></li>
+        <li><a href="fighting-productions.html" class="nav-link active">Fighting Productions</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="fp-hero">
+    <div class="fp-hero-content">
+      <div class="fp-logo-text">
+        <span>Fighting</span><br>Productions
+      </div>
+      <p class="fp-tagline">Ltd</p>
+      <p class="fp-description">
+        A video production company specializing in content creation for the combat sports industry. We help fighters, gyms, and brands reach their full potential and thrive in the market.
+      </p>
+      <div class="hero-cta mt-md">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Get in Touch
+        </a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Story</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="fade-in">
+          <p class="about-text">
+            Fighting Productions was founded by Pedro Pucheu and Andrew Cleminson with a shared passion for combat sports and visual storytelling. We saw an opportunity to bring cinematic quality to an industry often underserved by professional content creation.
+          </p>
+          <p class="about-text">
+            Our mission is to help fighters, gyms, and brands tell their stories in a way that resonates with audiences and drives real results. We believe that powerful storytelling creates a lasting connection between our clients and their target audience.
+          </p>
+          <p class="about-text">
+            What sets us apart is our deep understanding of the combat sports world combined with professional filmmaking expertise. We don't just document—we craft narratives that capture the spirit, dedication, and intensity of the sport.
+          </p>
+        </div>
+
+        <div class="founders-grid fade-in">
+          <div class="founder-card">
+            <img src="assets/images/pedro-founder.jpg" alt="Pedro Pucheu - Co-Founder" class="founder-image">
+            <h3 class="founder-name">Pedro Pucheu</h3>
+            <p class="founder-role">Co-Founder / Director</p>
+          </div>
+          <div class="founder-card">
+            <img src="assets/images/andrew-founder.jpg" alt="Andrew Cleminson - Co-Founder" class="founder-image">
+            <h3 class="founder-name">Andrew Cleminson</h3>
+            <p class="founder-role">Co-Founder / Producer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="philosophy-quote fade-in">
+        Storytelling creates a powerful connection between our clients and their target audience. We distinguish our work through narrative-driven content rather than basic documentation.
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Work With -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Who We Work With</h2>
+        <p class="section-description">We partner with those dedicated to excellence in combat sports.</p>
+      </div>
+
+      <div class="client-types fade-in">
+        <div class="client-type">
+          <div class="client-type-icon">
+            <i class="fas fa-fist-raised"></i>
+          </div>
+          <p class="client-type-label">Fighters</p>
+        </div>
+        <div class="client-type">
+          <div class="client-type-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <p class="client-type-label">Gyms</p>
+        </div>
+        <div class="client-type">
+          <div class="client-type-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <p class="client-type-label">Brands</p>
+        </div>
+        <div class="client-type">
+          <div class="client-type-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <p class="client-type-label">Events</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-description">Comprehensive video production tailored for combat sports.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="service-title">Promo Videos</h3>
+          <p class="service-description">High-impact promotional content for fights, events, and athlete profiles that build hype and engagement.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="service-title">Documentaries</h3>
+          <p class="service-description">In-depth storytelling that captures the journey, dedication, and human side of combat sports athletes.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="service-title">Brand Content</h3>
+          <p class="service-description">Strategic video content for gyms, equipment brands, and sponsors looking to connect with the combat sports audience.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="service-title">Event Coverage</h3>
+          <p class="service-description">Professional coverage of fights, tournaments, and combat sports events with cinematic quality.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <h3 class="service-title">Social Media Content</h3>
+          <p class="service-description">Optimized short-form content designed for maximum impact across social platforms.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="service-title">Training Videos</h3>
+          <p class="service-description">Professional instructional content for gyms and athletes looking to share techniques and build authority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showreel Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Work</h2>
+        <p class="section-description">See what Fighting Productions can do for you.</p>
+      </div>
+
+      <div class="video-container fade-in">
+        <!-- Replace with actual Fighting Productions showreel -->
+        <iframe
+          src="https://player.vimeo.com/video/YOUR_SHOWREEL_ID"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section-dark">
+    <div class="container text-center">
+      <h2 class="display-title">Ready to<br>Level Up?</h2>
+      <p class="section-description mt-md mb-lg" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        Let's discuss how Fighting Productions can help you reach your full potential with professional video content that stands out.
+      </p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">
+          <i class="fas fa-envelope"></i> Contact Us
+        </a>
+        <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-instagram"></i> Follow Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">PEDRO PUCHEU</div>
+
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="motion.html">Motion</a></li>
+          <li><a href="stills.html">Stills</a></li>
+          <li><a href="fighting-productions.html">Fighting Productions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:pedropucheu@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pedro Pucheu / Fighting Productions Ltd. All rights reserved. | London, UK</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
