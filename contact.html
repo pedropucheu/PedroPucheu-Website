@@ -113,14 +113,20 @@
 
             <div class="form-group">
               <label for="subject" class="form-label">Subject</label>
-              <select id="subject" name="subject" class="form-select" required>
-                <option value="" disabled selected>Select a subject</option>
-                <option value="Film Project">Film Project</option>
-                <option value="Photography Project">Photography Project</option>
-                <option value="Commercial/Brand Work">Commercial / Brand Work</option>
-                <option value="Collaboration">Collaboration</option>
-                <option value="Other">Other</option>
-              </select>
+              <div class="custom-select custom-select-light" id="subjectSelect">
+                <div class="custom-select-trigger">
+                  <span>Select a subject</span>
+                  <span class="custom-select-arrow">▼</span>
+                </div>
+                <div class="custom-select-options">
+                  <div class="custom-select-option" data-value="Film Project">Film Project</div>
+                  <div class="custom-select-option" data-value="Photography Project">Photography Project</div>
+                  <div class="custom-select-option" data-value="Commercial/Brand Work">Commercial / Brand Work</div>
+                  <div class="custom-select-option" data-value="Collaboration">Collaboration</div>
+                  <div class="custom-select-option" data-value="Other">Other</div>
+                </div>
+                <input type="hidden" name="subject" id="subject" value="">
+              </div>
             </div>
 
             <div class="form-group">
@@ -223,5 +229,36 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Custom Select Dropdown
+    document.querySelectorAll('.custom-select').forEach(select => {
+      const trigger = select.querySelector('.custom-select-trigger');
+      const hiddenInput = select.querySelector('input[type="hidden"]');
+      const triggerText = trigger.querySelector('span:first-child');
+
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelectorAll('.custom-select').forEach(s => {
+          if (s !== select) s.classList.remove('open');
+        });
+        select.classList.toggle('open');
+      });
+
+      select.querySelectorAll('.custom-select-option').forEach(option => {
+        option.addEventListener('click', () => {
+          triggerText.textContent = option.textContent;
+          hiddenInput.value = option.dataset.value;
+          select.classList.remove('open');
+          trigger.classList.add('has-value');
+        });
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.custom-select').forEach(select => {
+        select.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
