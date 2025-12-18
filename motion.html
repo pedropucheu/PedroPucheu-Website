@@ -4,37 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Motion Showcase - Pedro Pucheu's film and video work including documentaries, short films, and branded content.">
-  <title>Motion Showcase | Pedro Pucheu</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Styles -->
+  <title>Motion | Pedro Pucheu</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Page Loader -->
   <div class="page-loader" id="pageLoader">
-    <div class="loader-spinner"></div>
+    <div class="loader-text">Pedro Pucheu</div>
   </div>
 
   <!-- Navigation -->
-  <nav class="nav scrolled" id="mainNav">
+  <nav class="nav" id="mainNav">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+      <a href="index.html" class="nav-logo">Pedro Pucheu</a>
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="motion.html" class="nav-link active">Motion</a></li>
-        <li><a href="stills.html" class="nav-link">Stills</a></li>
-        <li><a href="fighting-productions.html" class="nav-link">Fighting Productions</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item">
+          <span class="nav-link nav-item-dropdown active">Motion Showcase <span class="dropdown-arrow">▼</span></span>
+          <div class="dropdown-menu">
+            <a href="motion.html#yan-texeira">Yan Texeira</a>
+            <a href="motion.html#celebration">A Celebration of Life</a>
+            <a href="motion.html#unknown-reality">An Unknown Reality</a>
+            <a href="motion.html#homegrown">Homegrown</a>
+            <a href="motion.html#community">Community</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link nav-item-dropdown">Stills <span class="dropdown-arrow">▼</span></span>
+          <div class="dropdown-menu">
+            <a href="stills.html#portraits">Portraits</a>
+            <a href="stills.html#food">Food</a>
+            <a href="stills.html#clothing">Clothing</a>
+          </div>
+        </li>
+        <li><a href="fighting-productions.html" class="nav-link">Fighting Productions</a></li>
       </ul>
+
+      <a href="contact.html" class="nav-cta">
+        Get in Touch <span class="arrow">→</span>
+      </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
@@ -45,355 +55,204 @@
   </nav>
 
   <!-- Page Header -->
-  <section class="section" style="padding-top: 150px;">
+  <header class="page-header">
     <div class="container">
-      <div class="section-header">
-        <p class="hero-subtitle">Portfolio</p>
-        <h1 class="display-title">Motion<br>Showcase</h1>
-        <p class="section-description">A collection of short films, documentaries, and branded content. Each project represents a unique story told through cinematic visuals.</p>
-      </div>
+      <h1 class="page-title">Motion Showcase</h1>
     </div>
-  </section>
+  </header>
 
-  <!-- Project Filter -->
-  <section class="section" style="padding-top: 0;">
+  <!-- Project 1: Yan Texeira -->
+  <section class="section" id="yan-texeira" style="padding-top: 0;">
     <div class="container">
-      <div class="gallery-categories">
-        <button class="gallery-category-btn active" data-filter="all">All</button>
-        <button class="gallery-category-btn" data-filter="documentary">Documentary</button>
-        <button class="gallery-category-btn" data-filter="short-film">Short Film</button>
-        <button class="gallery-category-btn" data-filter="branded">Branded</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Grid -->
-  <section class="section section-dark" style="padding-top: var(--space-md);">
-    <div class="container">
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- Yan Texeira -->
-        <article class="project-card project-featured fade-in" data-category="documentary">
-          <img src="assets/images/yan-texeira-thumb.jpg" alt="Yan Texeira Documentary" class="project-card-image">
-          <div class="project-card-overlay">
-            <span class="project-card-category">Short Documentary</span>
-            <h2 class="project-card-title">Yan Texeira</h2>
-            <p class="project-card-role">Produced / Directed / Shot / Edited</p>
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <div class="about-label">
+            <span class="label">Short Documentary</span>
           </div>
-          <button class="btn-play project-card-play" data-video="yan-texeira" aria-label="Play video"></button>
-        </article>
-
-        <!-- A Celebration of Life -->
-        <article class="project-card fade-in" data-category="short-film">
-          <img src="assets/images/celebration-thumb.jpg" alt="A Celebration of Life" class="project-card-image">
-          <div class="project-card-overlay">
-            <span class="project-card-category">Short Film</span>
-            <h2 class="project-card-title">A Celebration of Life</h2>
-            <p class="project-card-role">Written / Produced / Directed / Shot / Edited</p>
-          </div>
-          <button class="btn-play project-card-play" data-video="celebration" aria-label="Play video"></button>
-        </article>
-
-        <!-- An Unknown Reality -->
-        <article class="project-card fade-in" data-category="short-film">
-          <img src="assets/images/unknown-reality-thumb.jpg" alt="An Unknown Reality" class="project-card-image">
-          <div class="project-card-overlay">
-            <span class="project-card-category">Short Film</span>
-            <h2 class="project-card-title">An Unknown Reality</h2>
-            <p class="project-card-role">Written / Produced / Directed / Shot / Edited</p>
-          </div>
-          <button class="btn-play project-card-play" data-video="unknown-reality" aria-label="Play video"></button>
-        </article>
-
-        <!-- Homegrown -->
-        <article class="project-card fade-in" data-category="branded">
-          <img src="assets/images/homegrown-thumb.jpg" alt="Homegrown" class="project-card-image">
-          <div class="project-card-overlay">
-            <span class="project-card-category">Branded Content</span>
-            <h2 class="project-card-title">Homegrown</h2>
-            <p class="project-card-role">Produced / Directed / Shot / Edited</p>
-          </div>
-          <button class="btn-play project-card-play" data-video="homegrown" aria-label="Play video"></button>
-        </article>
-
-        <!-- Community -->
-        <article class="project-card fade-in" data-category="short-film">
-          <img src="assets/images/community-thumb.jpg" alt="Community" class="project-card-image">
-          <div class="project-card-overlay">
-            <span class="project-card-category">Short Film</span>
-            <h2 class="project-card-title">Community</h2>
-            <p class="project-card-role">Director of Photography</p>
-          </div>
-          <button class="btn-play project-card-play" data-video="community" aria-label="Play video"></button>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Details Sections -->
-  <section class="section" id="yan-texeira-section">
-    <div class="container">
-      <div class="project-info-grid">
-        <div class="project-description fade-in">
-          <h2 class="section-title">Yan Texeira</h2>
-          <p>This documentary profiles Yan Texeira, an MMA fighter training in Rocinha, one of Rio de Janeiro's most prominent favelas. The film aims to shine a light on Yan's lifestyle, and to reveal such difficulties to a wider audience.</p>
-          <p>The documentary examines systemic barriers faced by athletes in impoverished communities. Specific challenges highlighted include inability to afford recovery treatments, medical care, proper nutrition, and the simultaneous burden of family financial support.</p>
-          <p>I'm extremely grateful to have had the privilege to gain access to Yan's everyday life. Rather than focusing solely on sports achievement, this project functions as social documentation, revealing the intersection of athletic aspiration and socioeconomic constraint within Rio's favela communities.</p>
+          <h2 class="headline-lg mb-md">Yan Texeira</h2>
+          <p class="text-body mb-md">
+            A short documentary following the journey of professional boxer Yan Texeira as he prepares for one of the most important fights of his career.
+          </p>
+          <p class="text-body mb-lg">
+            The film explores themes of dedication, sacrifice, and the relentless pursuit of excellence in combat sports.
+          </p>
+          <p class="label">Role: Produced / Directed / Shot / Edited</p>
         </div>
-        <aside class="project-sidebar fade-in">
-          <div class="project-detail-item">
-            <div class="project-detail-label">Category</div>
-            <div class="project-detail-value">Short Documentary</div>
+        <div class="about-image fade-in">
+          <div class="video-placeholder">
+            <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Yan Texeira - Documentary">
+            <div class="play-button">▶</div>
           </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Role</div>
-            <div class="project-detail-value">Produced / Directed / Shot / Edited</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Location</div>
-            <div class="project-detail-value">Rocinha, Rio de Janeiro, Brazil</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Subject</div>
-            <div class="project-detail-value">MMA Fighter / Social Documentary</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="video-container mt-lg fade-in">
-        <!-- Replace with actual video embed -->
-        <iframe
-          src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="project-gallery">
-        <img src="assets/images/yan-texeira-1.jpg" alt="Yan Texeira Documentary Still 1" class="fade-in">
-        <img src="assets/images/yan-texeira-2.jpg" alt="Yan Texeira Documentary Still 2" class="fade-in">
-        <img src="assets/images/yan-texeira-3.jpg" alt="Yan Texeira Documentary Still 3" class="fade-in">
-        <img src="assets/images/yan-texeira-4.jpg" alt="Yan Texeira Documentary Still 4" class="fade-in">
-      </div>
-    </div>
-  </section>
-
-  <!-- A Celebration of Life Section -->
-  <section class="section section-dark" id="celebration-section">
-    <div class="container">
-      <div class="project-info-grid">
-        <div class="project-description fade-in">
-          <h2 class="section-title">A Celebration of Life</h2>
-          <p>A short film exploring grief and loss through the perspective of a young protagonist confronting his mother's death. The narrative follows a boy who struggles with the memories of the recent loss of his mother which haunt him, and now attempts to overcome them.</p>
-          <p>The film emphasizes shifting focus from suffering to remembrance. Individuals process loss differently—through therapy, family support, or personal coping mechanisms. The core message advocates moving beyond dwelling on the suffering that our loved ones may have experienced before their passing to instead celebrating their lives and cherishing shared moments.</p>
         </div>
-        <aside class="project-sidebar fade-in">
-          <div class="project-detail-item">
-            <div class="project-detail-label">Category</div>
-            <div class="project-detail-value">Short Film</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Role</div>
-            <div class="project-detail-value">Written / Produced / Directed / Shot / Edited</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Theme</div>
-            <div class="project-detail-value">Grief / Loss / Remembrance</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="video-container mt-lg fade-in">
-        <iframe
-          src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="project-gallery">
-        <img src="assets/images/celebration-1.jpg" alt="A Celebration of Life Still 1" class="fade-in">
-        <img src="assets/images/celebration-2.jpg" alt="A Celebration of Life Still 2" class="fade-in">
       </div>
     </div>
   </section>
 
-  <!-- An Unknown Reality Section -->
-  <section class="section" id="unknown-reality-section">
+  <!-- Project 2: A Celebration of Life -->
+  <section class="section" id="celebration" style="border-top: 1px solid var(--color-border);">
     <div class="container">
-      <div class="project-info-grid">
-        <div class="project-description fade-in">
-          <h2 class="section-title">An Unknown Reality</h2>
-          <p>This short film explores psychological themes through the lens of a protagonist struggling to distinguish between hallucination and reality. The narrative centers on a boy with a history of hallucinations who encounters a new entity he believes is genuinely real and poses danger to himself and others.</p>
-          <p>As he attempts to convince those around him, his therapist counters his perspective, suggesting the experience exists only in his mind. The film examines unreliable perception, mental health advocacy versus skepticism, and the tension between subjective experience and external validation.</p>
-          <p>This was my inaugural short film, created approximately one year after acquiring my first camera. The experience deepened my understanding of filmmaking's comprehensive nature: the importance of the harmony between all aspects of it—sound design, cinematography, acting...</p>
+      <div class="about-grid" style="direction: rtl;">
+        <div class="about-image fade-in" style="direction: ltr;">
+          <div class="video-placeholder">
+            <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" alt="A Celebration of Life - Short Film">
+            <div class="play-button">▶</div>
+          </div>
         </div>
-        <aside class="project-sidebar fade-in">
-          <div class="project-detail-item">
-            <div class="project-detail-label">Category</div>
-            <div class="project-detail-value">Short Film</div>
+        <div class="about-content fade-in" style="direction: ltr;">
+          <div class="about-label">
+            <span class="label">Short Film</span>
           </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Role</div>
-            <div class="project-detail-value">Written / Produced / Directed / Shot / Edited</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Theme</div>
-            <div class="project-detail-value">Psychology / Perception / Mental Health</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Note</div>
-            <div class="project-detail-value">First Short Film</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="video-container mt-lg fade-in">
-        <iframe
-          src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="project-gallery">
-        <img src="assets/images/unknown-reality-1.jpg" alt="An Unknown Reality Still 1" class="fade-in">
-        <img src="assets/images/unknown-reality-2.jpg" alt="An Unknown Reality Still 2" class="fade-in">
+          <h2 class="headline-lg mb-md">A Celebration of Life</h2>
+          <p class="text-body mb-md">
+            A narrative short film exploring themes of memory, loss, and the moments that define us. Shot on location in London.
+          </p>
+          <p class="text-body mb-lg">
+            The film follows a family gathering that becomes an unexpected journey through shared memories and unspoken truths.
+          </p>
+          <p class="label">Role: Written / Produced / Directed / Shot / Edited</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Homegrown Section -->
-  <section class="section section-dark" id="homegrown-section">
+  <!-- Project 3: An Unknown Reality -->
+  <section class="section" id="unknown-reality" style="border-top: 1px solid var(--color-border);">
     <div class="container">
-      <div class="project-info-grid">
-        <div class="project-description fade-in">
-          <h2 class="section-title">Homegrown</h2>
-          <p>A branded content piece showcasing authentic storytelling for commercial purposes. This project demonstrates the ability to create compelling narratives that serve both artistic vision and brand objectives.</p>
-          <p>The approach combines cinematic quality with strategic messaging, creating content that resonates with audiences while achieving marketing goals.</p>
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <div class="about-label">
+            <span class="label">Short Film</span>
+          </div>
+          <h2 class="headline-lg mb-md">An Unknown Reality</h2>
+          <p class="text-body mb-md">
+            A psychological short film that blurs the line between perception and reality. The story follows a character questioning the nature of their existence.
+          </p>
+          <p class="text-body mb-lg">
+            Exploring themes of consciousness and identity through a visual narrative that challenges viewers' expectations.
+          </p>
+          <p class="label">Role: Written / Produced / Directed / Shot / Edited</p>
         </div>
-        <aside class="project-sidebar fade-in">
-          <div class="project-detail-item">
-            <div class="project-detail-label">Category</div>
-            <div class="project-detail-value">Branded Content</div>
+        <div class="about-image fade-in">
+          <div class="video-placeholder">
+            <img src="https://media.giphy.com/media/l0MYGb1LuZ3n7dRnO/giphy.gif" alt="An Unknown Reality - Short Film">
+            <div class="play-button">▶</div>
           </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Role</div>
-            <div class="project-detail-value">Produced / Directed / Shot / Edited</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Type</div>
-            <div class="project-detail-value">Commercial / Brand Film</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="video-container mt-lg fade-in">
-        <iframe
-          src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="project-gallery">
-        <img src="assets/images/homegrown-1.jpg" alt="Homegrown Still 1" class="fade-in">
-        <img src="assets/images/homegrown-2.jpg" alt="Homegrown Still 2" class="fade-in">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Community Section -->
-  <section class="section" id="community-section">
+  <!-- Project 4: Homegrown -->
+  <section class="section" id="homegrown" style="border-top: 1px solid var(--color-border);">
     <div class="container">
-      <div class="project-info-grid">
-        <div class="project-description fade-in">
-          <h2 class="section-title">Community</h2>
-          <p>A collaborative short film project where I served as Director of Photography. This project showcases my cinematography skills in a collaborative environment, working with another director to bring their vision to life.</p>
-          <p>The role of DP allowed me to focus entirely on the visual language of the film—composition, lighting, camera movement, and creating the mood that serves the story.</p>
+      <div class="about-grid" style="direction: rtl;">
+        <div class="about-image fade-in" style="direction: ltr;">
+          <div class="video-placeholder">
+            <img src="https://media.giphy.com/media/xUPGcmvgjMIEhy6jZu/giphy.gif" alt="Homegrown - Branded Content">
+            <div class="play-button">▶</div>
+          </div>
         </div>
-        <aside class="project-sidebar fade-in">
-          <div class="project-detail-item">
-            <div class="project-detail-label">Category</div>
-            <div class="project-detail-value">Short Film</div>
+        <div class="about-content fade-in" style="direction: ltr;">
+          <div class="about-label">
+            <span class="label">Branded Content</span>
           </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Role</div>
-            <div class="project-detail-value">Director of Photography</div>
-          </div>
-          <div class="project-detail-item">
-            <div class="project-detail-label">Type</div>
-            <div class="project-detail-value">Collaborative Project</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="video-container mt-lg fade-in">
-        <iframe
-          src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <div class="project-gallery">
-        <img src="assets/images/community-1.jpg" alt="Community Still 1" class="fade-in">
-        <img src="assets/images/community-2.jpg" alt="Community Still 2" class="fade-in">
+          <h2 class="headline-lg mb-md">Homegrown</h2>
+          <p class="text-body mb-md">
+            A brand film created for a local sustainable food company, showcasing their farm-to-table philosophy and commitment to quality.
+          </p>
+          <p class="text-body mb-lg">
+            The project combined documentary-style filming with carefully crafted commercial visuals to tell an authentic brand story.
+          </p>
+          <p class="label">Role: Produced / Directed / Shot / Edited</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section section-dark">
-    <div class="container text-center">
-      <h2 class="section-title centered">Interested in Working Together?</h2>
-      <p class="section-description">Let's create something meaningful.</p>
-      <a href="contact.html" class="btn btn-primary mt-md">
-        <i class="fas fa-envelope"></i> Get in Touch
-      </a>
+  <!-- Project 5: Community -->
+  <section class="section" id="community" style="border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <div class="about-label">
+            <span class="label">Short Film</span>
+          </div>
+          <h2 class="headline-lg mb-md">Community</h2>
+          <p class="text-body mb-md">
+            A short film examining the bonds that form within urban communities and the spaces that bring people together.
+          </p>
+          <p class="text-body mb-lg">
+            Served as Director of Photography on this collaborative project, focusing on capturing intimate moments within public spaces.
+          </p>
+          <p class="label">Role: Director of Photography</p>
+        </div>
+        <div class="about-image fade-in">
+          <div class="video-placeholder">
+            <img src="https://media.giphy.com/media/3o7btZ1Gm7ZL25pLMs/giphy.gif" alt="Community - Short Film">
+            <div class="play-button">▶</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <p class="cta-subtitle">Have a project in mind?</p>
+        <h2 class="cta-title"><a href="contact.html">Let's create together</a></h2>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">PEDRO PUCHEU</div>
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-title">Sitemap</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="stills.html">Stills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-        <ul class="footer-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="motion.html">Motion</a></li>
-          <li><a href="stills.html">Stills</a></li>
-          <li><a href="fighting-productions.html">Fighting Productions</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div>
+          <h4 class="footer-title">Location</h4>
+          <p class="footer-links">
+            <span>London, UK</span>
+          </p>
+          <p class="footer-location-time" id="currentTime"></p>
+        </div>
 
-        <div class="social-links">
-          <a href="https://www.instagram.com/plp_visuals" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/pedropucheu" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="mailto:pedropucheu@gmail.com" class="social-link" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
+        <div>
+          <h4 class="footer-title">Socials</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/plp_visuals" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
+            <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Newsletter</h4>
+          <form class="footer-newsletter">
+            <input type="email" placeholder="E-mail Address*" required>
+            <button type="submit">→</button>
+          </form>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Pedro Pucheu. All rights reserved. | London, UK</p>
+        <p>&copy; 2024 Pedro Pucheu</p>
+        <p>London, UK</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>
