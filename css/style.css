@@ -23,7 +23,7 @@
 
   --color-border: #e5e5e5;
   --color-border-dark: #222222;
-  --color-border-light: rgba(255,255,255,0.15);
+  --color-border-light: rgba(255, 255, 255, 0.15);
 
   /* Typography */
   --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -50,7 +50,9 @@
 }
 
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -85,7 +87,12 @@ img {
 /* ============================================
    TYPOGRAPHY
    ============================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -136,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .label-dark {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Accent Color Highlights - Minimal Grayscale */
@@ -314,7 +321,7 @@ body.loading-complete .nav {
   background: var(--color-bg);
   min-width: 220px;
   padding: 0.75rem;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   opacity: 0;
@@ -478,7 +485,7 @@ body.loading-complete .section {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-image {
@@ -498,7 +505,7 @@ body.loading-complete .section {
   left: 0;
   right: 0;
   padding: var(--space-md);
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
   color: white;
   transform: translateY(20px);
   opacity: 0;
@@ -541,7 +548,7 @@ body.loading-complete .section {
 }
 
 .project-card-visible:hover .project-card-image {
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .project-card-visible .project-card-info {
@@ -651,7 +658,7 @@ body.loading-complete .section {
 }
 
 .about-image:hover img {
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
@@ -724,7 +731,7 @@ body.loading-complete .section {
 
 .team-card:hover .team-card-image {
   filter: grayscale(0%);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .team-card-name {
@@ -773,7 +780,7 @@ body.loading-complete .section {
 
 .insight-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .insight-label {
@@ -798,7 +805,7 @@ body.loading-complete .section {
   align-items: center;
   justify-content: space-between;
   padding-top: var(--space-md);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: auto;
 }
 
@@ -818,7 +825,7 @@ body.loading-complete .section {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.25rem;
 }
 
@@ -848,7 +855,7 @@ body.loading-complete .section {
   background: var(--color-bg-dark);
   color: var(--color-text-light);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .service-title {
@@ -865,7 +872,7 @@ body.loading-complete .section {
 }
 
 .service-card:hover .service-description {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .service-footer {
@@ -1318,7 +1325,7 @@ body.loading-complete .section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
   opacity: 0;
   transition: opacity var(--transition);
   pointer-events: none;
@@ -1326,7 +1333,7 @@ body.loading-complete .section {
 
 .gallery-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item:hover::after {
@@ -1367,7 +1374,7 @@ body.loading-complete .section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 .featured-banner-bg img {
@@ -1442,7 +1449,7 @@ body.loading-complete .section {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -1497,7 +1504,9 @@ body.loading-complete .section {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.6s ease-out, visibility 0.6s;
+  transition:
+    opacity 0.6s ease-out,
+    visibility 0.6s;
 }
 
 .page-loader.hidden {
@@ -1610,8 +1619,13 @@ body.loading-complete .section {
 }
 
 @keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 /* Old text loader as fallback */
@@ -1638,8 +1652,15 @@ body.loading-complete .section {
 }
 
 @keyframes loaderPulse {
-  0%, 100% { width: 40px; opacity: 1; }
-  50% { width: 60px; opacity: 0.7; }
+  0%,
+  100% {
+    width: 40px;
+    opacity: 1;
+  }
+  50% {
+    width: 60px;
+    opacity: 0.7;
+  }
 }
 
 /* Show text loader on pages without image loader */
@@ -1714,29 +1735,59 @@ body.loading-complete .section {
 /* ============================================
    UTILITIES
    ============================================ */
-.text-center { text-align: center; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
 
-.mt-xs { margin-top: var(--space-xs); }
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-.mt-xl { margin-top: var(--space-xl); }
+.mt-xs {
+  margin-top: var(--space-xs);
+}
+.mt-sm {
+  margin-top: var(--space-sm);
+}
+.mt-md {
+  margin-top: var(--space-md);
+}
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+.mt-xl {
+  margin-top: var(--space-xl);
+}
 
-.mb-xs { margin-bottom: var(--space-xs); }
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-.mb-xl { margin-bottom: var(--space-xl); }
+.mb-xs {
+  margin-bottom: var(--space-xs);
+}
+.mb-sm {
+  margin-bottom: var(--space-sm);
+}
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
 
-.pt-xl { padding-top: var(--space-xl); }
-.pb-xl { padding-bottom: var(--space-xl); }
+.pt-xl {
+  padding-top: var(--space-xl);
+}
+.pb-xl {
+  padding-bottom: var(--space-xl);
+}
 
 /* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
 }
 
 .fade-in.visible {
@@ -1784,7 +1835,7 @@ body.loading-complete .section {
     right: 0;
     background: var(--color-bg);
     padding: var(--space-md);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .hero-split {
@@ -2021,8 +2072,15 @@ body.loading-complete .section {
 }
 
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.6; height: 40px; }
-  50% { opacity: 1; height: 50px; }
+  0%,
+  100% {
+    opacity: 0.6;
+    height: 40px;
+  }
+  50% {
+    opacity: 1;
+    height: 50px;
+  }
 }
 
 /* Transparent Navigation */
@@ -2084,7 +2142,6 @@ body.loading-complete .section {
   aspect-ratio: 4/3;
   object-fit: cover;
 }
-
 
 /* ============================================
    SELECTED PROJECTS SECTION
@@ -2639,11 +2696,7 @@ body.loading-complete .section {
 .disauthority-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 /* Bottom Navigation */

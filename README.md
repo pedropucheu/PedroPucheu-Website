@@ -29,6 +29,7 @@ pucheu portfolio/
 Replace placeholder images in `assets/images/`:
 
 **Project Thumbnails:**
+
 - `yan-texeira-thumb.jpg`
 - `celebration-thumb.jpg`
 - `unknown-reality-thumb.jpg`
@@ -36,16 +37,19 @@ Replace placeholder images in `assets/images/`:
 - `community-thumb.jpg`
 
 **Project Gallery Images:**
+
 - `yan-texeira-1.jpg`, `yan-texeira-2.jpg`, etc.
 - `celebration-1.jpg`, `celebration-2.jpg`, etc.
 - (Similar for other projects)
 
 **Photography (in `assets/images/stills/`):**
+
 - `portrait-1.jpg` through `portrait-12.jpg`
 - `food-1.jpg` through `food-7.jpg`
 - `clothing-1.jpg` through `clothing-8.jpg`
 
 **Other:**
+
 - `pedro-portrait.jpg` - About section photo
 - `hero-poster.jpg` - Hero video poster/fallback
 - `pedro-founder.jpg` - Fighting Productions founder photo
@@ -59,6 +63,7 @@ Add `showreel.mp4` to `assets/videos/`
 
 **Option B: Vimeo/YouTube Embeds**
 Replace `YOUR_VIDEO_ID` or `YOUR_SHOWREEL_ID` in the HTML files with actual video IDs:
+
 ```html
 <!-- Vimeo -->
 <iframe src="https://player.vimeo.com/video/123456789" ...></iframe>
@@ -75,13 +80,15 @@ The contact form uses Formspree. To set it up:
 2. Create a free account
 3. Create a new form
 4. Replace `YOUR_FORM_ID` in `contact.html`:
+
 ```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"></form>
 ```
 
 ### 4. Update Social Links
 
 In all HTML files, update:
+
 - Instagram: `https://www.instagram.com/plp_visuals`
 - LinkedIn: `https://www.linkedin.com/in/pedropucheu`
 - Vimeo: `https://vimeo.com/pedropucheu`
@@ -100,16 +107,19 @@ In all HTML files, update:
 ## Customization
 
 ### Colors (in `css/style.css`)
+
 ```css
 :root {
-  --color-accent: #e50914;        /* Red accent */
-  --color-bg-primary: #0a0a0a;    /* Main background */
-  --color-bg-secondary: #111111;  /* Section backgrounds */
+  --color-accent: #e50914; /* Red accent */
+  --color-bg-primary: #0a0a0a; /* Main background */
+  --color-bg-secondary: #111111; /* Section backgrounds */
 }
 ```
 
 ### Fonts
+
 Using Google Fonts:
+
 - **Bebas Neue** - Display/titles
 - **Montserrat** - Headings
 - **Inter** - Body text
@@ -117,6 +127,7 @@ Using Google Fonts:
 ## Deployment
 
 Upload all files to any web hosting service:
+
 - Netlify (free)
 - Vercel (free)
 - GitHub Pages (free)
@@ -125,6 +136,7 @@ Upload all files to any web hosting service:
 ## Image Recommendations
 
 **Optimal Sizes:**
+
 - Thumbnails: 800x450px (16:9)
 - Gallery images: 800x800px (1:1)
 - Hero poster: 1920x1080px
