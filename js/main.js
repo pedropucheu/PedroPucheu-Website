@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Live Time
   initLiveTime();
+
+  // Showreel Video
+  initShowreel();
 });
 
 /* Page Loader - Luca Style Image Expansion */
@@ -287,6 +290,43 @@ function initLiveTime() {
 
   updateTime();
   setInterval(updateTime, 1000);
+}
+
+/* Showreel Video Player */
+function initShowreel() {
+  const container = document.getElementById('showreelContainer');
+  const video = document.getElementById('showreelVideo');
+
+  if (!container || !video) return;
+
+  container.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      container.classList.add('playing');
+    } else {
+      video.pause();
+      container.classList.remove('playing');
+    }
+  });
+
+  video.addEventListener('ended', () => {
+    container.classList.remove('playing');
+  });
+
+  // Pause on scroll out of view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting && !video.paused) {
+          video.pause();
+          container.classList.remove('playing');
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(container);
 }
 
 /* Smooth scroll for anchor links */
