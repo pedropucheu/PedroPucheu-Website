@@ -8,32 +8,44 @@
       content="Work Portfolio - Pedro Pucheu's film and photography projects including documentaries, short films, and commercial content."
     />
     <title>Work | Pedro Pucheu</title>
-    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/ollie.css" />
   </head>
   <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-      <div class="loader-text">Pedro Pucheu</div>
-    </div>
-
     <!-- Navigation -->
-    <nav class="top-nav visible" id="topNav">
-      <a href="index.html" class="top-logo">PEDRO PUCHEU</a>
-      <ul class="top-menu">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="stills.html">Stills</a></li>
-        <li><a href="motion.html">Motion</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="nav scrolled" id="mainNav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="stills.html" class="nav-link">Stills</a></li>
+          <li><a href="motion.html" class="nav-link">Motion</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <header class="page-header">
       <div class="container">
         <div class="page-header-row">
-          <h1 class="page-title">All Projects <span>(5)</span></h1>
-          <span class="view-toggle">Grid View</span>
+          <h1 class="page-title fade-in">ALL WORK <span>(6)</span></h1>
+          <span class="view-toggle text-ui">Grid View</span>
         </div>
       </div>
     </header>
@@ -50,8 +62,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">Yan Texeira</h3>
+              <h3 class="project-card-title">YAN TEXEIRA</h3>
               <p class="project-card-subtitle">Short Documentary</p>
             </div>
           </a>
@@ -64,8 +77,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">A Celebration of Life</h3>
+              <h3 class="project-card-title">A CELEBRATION OF LIFE</h3>
               <p class="project-card-subtitle">Short Film</p>
             </div>
           </a>
@@ -78,8 +92,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">An Unknown Reality</h3>
+              <h3 class="project-card-title">AN UNKNOWN REALITY</h3>
               <p class="project-card-subtitle">Short Film</p>
             </div>
           </a>
@@ -92,8 +107,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">Homegrown</h3>
+              <h3 class="project-card-title">HOMEGROWN</h3>
               <p class="project-card-subtitle">Branded Content</p>
             </div>
           </a>
@@ -106,8 +122,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">Community</h3>
+              <h3 class="project-card-title">COMMUNITY</h3>
               <p class="project-card-subtitle">Short Film</p>
             </div>
           </a>
@@ -120,8 +137,9 @@
               class="project-card-image"
               loading="lazy"
             />
+            <div class="project-card-overlay"></div>
             <div class="project-card-content">
-              <h3 class="project-card-title">Photography</h3>
+              <h3 class="project-card-title">PHOTOGRAPHY</h3>
               <p class="project-card-subtitle">Portraits & Editorial</p>
             </div>
           </a>
@@ -133,8 +151,8 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-content">
-          <p class="cta-subtitle">Interested in working together?</p>
-          <h2 class="cta-title"><a href="contact.html">Get in touch</a></h2>
+          <p class="cta-subtitle fade-in">Interested in working together?</p>
+          <h2 class="cta-title fade-in"><a href="contact.html">GET IN TOUCH</a></h2>
         </div>
       </div>
     </section>
@@ -148,26 +166,26 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
+              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Location</h4>
-            <p class="footer-links">
-              <span>London, UK</span>
-            </p>
-            <p class="footer-location-time" id="currentTime"></p>
+            <ul class="footer-links">
+              <li><span>London, UK</span></li>
+              <li><span id="currentTime"></span></li>
+            </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Socials</h4>
             <ul class="footer-links">
-              <li><a href="https://www.instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li>
-                <a href="https://www.linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a>
-              </li>
+              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
+              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
               <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
             </ul>
           </div>
@@ -175,19 +193,23 @@
           <div>
             <h4 class="footer-title">Newsletter</h4>
             <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address*" required />
+              <input type="email" placeholder="E-mail Address" required />
               <button type="submit">→</button>
             </form>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Pedro Pucheu</p>
+          <p>&copy; 2026 Pedro Pucheu</p>
           <p>London, UK</p>
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/gsap-animations.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

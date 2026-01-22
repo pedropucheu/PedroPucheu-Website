@@ -8,32 +8,52 @@
       content="Fighting Productions Ltd - Video production company specializing in combat sports content."
     />
     <title>Fighting Productions | Pedro Pucheu</title>
-    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/ollie.css" />
   </head>
   <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-      <div class="loader-text">Fighting Productions</div>
-    </div>
-
     <!-- Navigation -->
-    <nav class="top-nav visible" id="topNav">
-      <a href="index.html" class="top-logo">PEDRO PUCHEU</a>
-      <ul class="top-menu">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="stills.html">Stills</a></li>
-        <li><a href="motion.html">Motion</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="nav scrolled" id="mainNav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="stills.html" class="nav-link">Stills</a></li>
+          <li><a href="motion.html" class="nav-link">Motion</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-split">
-      <div class="hero-content">
-        <p class="label mb-md fade-in">Production Company</p>
-        <h1 class="headline-xl mb-md fade-in">Fighting<br />Productions</h1>
-        <p class="text-body mb-lg fade-in">
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="container">
+        <div class="about-label">
+          <span class="label">Production Company</span>
+        </div>
+        <h1 class="page-title fade-in">FIGHTING PRODUCTIONS</h1>
+      </div>
+    </header>
+
+    <!-- Hero Statement -->
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <p class="text-statement mb-xl fade-in">
           A video production company specializing in content creation for the combat sports
           industry. We help fighters, gyms, and brands reach their full potential and thrive in the
           market.
@@ -42,16 +62,10 @@
           Get in Touch <span class="btn-arrow">→</span>
         </a>
       </div>
-      <div class="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1000&h=1200&fit=crop"
-          alt="Fighting Productions"
-        />
-      </div>
     </section>
 
     <!-- About Section -->
-    <section class="section">
+    <section class="section" style="border-top: 1px solid var(--color-border)">
       <div class="container">
         <div class="about-grid">
           <div class="about-content fade-in">
@@ -87,89 +101,34 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team-section" style="border-top: 1px solid var(--color-border)">
+    <section class="section" style="border-top: 1px solid var(--color-border)">
       <div class="container">
-        <div class="team-header">
-          <h2 class="headline-md">The Team</h2>
-          <div class="team-nav">
-            <button class="team-nav-btn" id="teamPrev">←</button>
-            <button class="team-nav-btn" id="teamNext">→</button>
-          </div>
-        </div>
-        <div class="team-carousel" id="teamCarousel">
-          <div class="team-card">
+        <h2 class="headline-section mb-xl fade-in">THE TEAM</h2>
+        <div class="projects-grid">
+          <div class="project-card fade-in" style="cursor: default">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
               alt="Pedro Pucheu"
-              class="team-card-image"
+              class="project-card-image"
               loading="lazy"
             />
-            <h3 class="team-card-name">Pedro Pucheu</h3>
-            <p class="team-card-role">Co-Founder / Director</p>
-          </div>
-          <div class="team-card">
-            <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop"
-              alt="Andrew Cleminson"
-              class="team-card-image"
-              loading="lazy"
-            />
-            <h3 class="team-card-name">Andrew Cleminson</h3>
-            <p class="team-card-role">Co-Founder / Producer</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Insights Section -->
-    <section class="section">
-      <div class="container">
-        <h2 class="headline-md mb-lg">Our Approach</h2>
-        <div class="insights-grid">
-          <div class="insight-card fade-in">
-            <p class="insight-label">Philosophy</p>
-            <p class="insight-text">
-              Storytelling creates a powerful connection between our clients and their target
-              audience. We distinguish our work through narrative-driven content rather than basic
-              documentation.
-            </p>
-            <div class="insight-footer">
-              <div class="insight-case">
-                <img
-                  src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=120&h=120&fit=crop"
-                  alt="Fighter Documentary"
-                  class="insight-case-image"
-                  loading="lazy"
-                />
-                <div>
-                  <p class="insight-case-label">Related Work</p>
-                  <p class="insight-case-title">Fighter Profiles</p>
-                </div>
-              </div>
-              <span>↗</span>
+            <div class="project-card-overlay" style="opacity: 1"></div>
+            <div class="project-card-content" style="opacity: 1; transform: none">
+              <h3 class="project-card-title">PEDRO PUCHEU</h3>
+              <p class="project-card-subtitle">Co-Founder / Director</p>
             </div>
           </div>
-
-          <div class="insight-card fade-in">
-            <p class="insight-label">Expertise</p>
-            <p class="insight-text">
-              With deep roots in combat sports and professional filmmaking, we understand both the
-              technical and emotional aspects of creating compelling fight content.
-            </p>
-            <div class="insight-footer">
-              <div class="insight-case">
-                <img
-                  src="https://images.unsplash.com/photo-1517438476312-10d79c077509?w=120&h=120&fit=crop"
-                  alt="Event Coverage"
-                  class="insight-case-image"
-                  loading="lazy"
-                />
-                <div>
-                  <p class="insight-case-label">Related Work</p>
-                  <p class="insight-case-title">Event Coverage</p>
-                </div>
-              </div>
-              <span>↗</span>
+          <div class="project-card fade-in" style="cursor: default">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop"
+              alt="Andrew Cleminson"
+              class="project-card-image"
+              loading="lazy"
+            />
+            <div class="project-card-overlay" style="opacity: 1"></div>
+            <div class="project-card-content" style="opacity: 1; transform: none">
+              <h3 class="project-card-title">ANDREW CLEMINSON</h3>
+              <p class="project-card-subtitle">Co-Founder / Producer</p>
             </div>
           </div>
         </div>
@@ -179,76 +138,76 @@
     <!-- Services Section -->
     <section class="section" style="border-top: 1px solid var(--color-border)">
       <div class="container">
-        <h2 class="headline-md mb-lg">Services</h2>
-        <div class="services-grid">
-          <div class="service-card fade-in">
-            <h3 class="service-title">Promo Videos</h3>
+        <h2 class="headline-section mb-xl fade-in">SERVICES</h2>
+        <div class="services-list">
+          <div class="service-item fade-in">
+            <h3 class="service-title">PROMO VIDEOS</h3>
             <p class="service-description">
               High-impact promotional content for fights, events, and athlete profiles that build
               hype and engagement.
             </p>
             <div class="service-footer">
               <span class="service-type">Video Production</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
 
-          <div class="service-card fade-in">
-            <h3 class="service-title">Documentaries</h3>
+          <div class="service-item fade-in">
+            <h3 class="service-title">DOCUMENTARIES</h3>
             <p class="service-description">
               In-depth storytelling that captures the journey, dedication, and human side of combat
               sports athletes.
             </p>
             <div class="service-footer">
               <span class="service-type">Documentary</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
 
-          <div class="service-card fade-in">
-            <h3 class="service-title">Brand Content</h3>
+          <div class="service-item fade-in">
+            <h3 class="service-title">BRAND CONTENT</h3>
             <p class="service-description">
               Strategic video content for gyms, equipment brands, and sponsors looking to connect
               with the combat sports audience.
             </p>
             <div class="service-footer">
               <span class="service-type">Commercial</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
 
-          <div class="service-card fade-in">
-            <h3 class="service-title">Event Coverage</h3>
+          <div class="service-item fade-in">
+            <h3 class="service-title">EVENT COVERAGE</h3>
             <p class="service-description">
               Professional coverage of fights, tournaments, and combat sports events with cinematic
               quality.
             </p>
             <div class="service-footer">
               <span class="service-type">Live Events</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
 
-          <div class="service-card fade-in">
-            <h3 class="service-title">Social Media</h3>
+          <div class="service-item fade-in">
+            <h3 class="service-title">SOCIAL MEDIA</h3>
             <p class="service-description">
               Optimized short-form content designed for maximum impact across social platforms.
             </p>
             <div class="service-footer">
               <span class="service-type">Social Content</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
 
-          <div class="service-card fade-in">
-            <h3 class="service-title">Training Videos</h3>
+          <div class="service-item fade-in">
+            <h3 class="service-title">TRAINING VIDEOS</h3>
             <p class="service-description">
               Professional instructional content for gyms and athletes looking to share techniques
               and build authority.
             </p>
             <div class="service-footer">
               <span class="service-type">Educational</span>
-              <span class="service-arrow">↗</span>
+              <span class="service-arrow">→</span>
             </div>
           </div>
         </div>
@@ -286,8 +245,10 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-content">
-          <p class="cta-subtitle">Ready to level up?</p>
-          <h2 class="cta-title"><a href="contact.html">Let's create something powerful</a></h2>
+          <p class="cta-subtitle fade-in">Ready to level up?</p>
+          <h2 class="cta-title fade-in">
+            <a href="contact.html">LET'S CREATE SOMETHING POWERFUL</a>
+          </h2>
         </div>
       </div>
     </section>
@@ -301,26 +262,26 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
+              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Location</h4>
-            <p class="footer-links">
-              <span>London, UK</span>
-            </p>
-            <p class="footer-location-time" id="currentTime"></p>
+            <ul class="footer-links">
+              <li><span>London, UK</span></li>
+              <li><span id="currentTime"></span></li>
+            </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Socials</h4>
             <ul class="footer-links">
-              <li><a href="https://www.instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li>
-                <a href="https://www.linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a>
-              </li>
+              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
+              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
               <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
             </ul>
           </div>
@@ -328,19 +289,23 @@
           <div>
             <h4 class="footer-title">Newsletter</h4>
             <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address*" required />
+              <input type="email" placeholder="E-mail Address" required />
               <button type="submit">→</button>
             </form>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Pedro Pucheu / Fighting Productions Ltd</p>
+          <p>&copy; 2026 Pedro Pucheu / Fighting Productions Ltd</p>
           <p>London, UK</p>
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/gsap-animations.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

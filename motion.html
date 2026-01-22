@@ -8,30 +8,42 @@
       content="Motion Showcase - Pedro Pucheu's film and video work including documentaries, short films, and branded content."
     />
     <title>Motion | Pedro Pucheu</title>
-    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/ollie.css" />
   </head>
   <body>
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-      <div class="loader-text">Pedro Pucheu</div>
-    </div>
-
     <!-- Navigation -->
-    <nav class="top-nav visible" id="topNav">
-      <a href="index.html" class="top-logo">PEDRO PUCHEU</a>
-      <ul class="top-menu">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="stills.html">Stills</a></li>
-        <li><a href="motion.html">Motion</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="nav scrolled" id="mainNav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="stills.html" class="nav-link">Stills</a></li>
+          <li><a href="motion.html" class="nav-link">Motion</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <header class="page-header">
       <div class="container">
-        <h1 class="page-title">Motion Showcase</h1>
+        <h1 class="page-title fade-in">MOTION SHOWCASE</h1>
       </div>
     </header>
 
@@ -43,7 +55,7 @@
             <div class="about-label">
               <span class="label">Short Documentary</span>
             </div>
-            <h2 class="headline-lg mb-md">Yan Texeira</h2>
+            <h2 class="headline-subhead mb-md">YAN TEXEIRA</h2>
             <p class="text-body mb-md">
               A short documentary following the journey of professional boxer Yan Texeira as he
               prepares for one of the most important fights of his career.
@@ -52,12 +64,12 @@
               The film explores themes of dedication, sacrifice, and the relentless pursuit of
               excellence in combat sports.
             </p>
-            <p class="label">Role: Produced / Directed / Shot / Edited</p>
+            <p class="text-label">Role: Produced / Directed / Shot / Edited</p>
           </div>
           <div class="about-image fade-in">
             <div class="video-placeholder">
               <img
-                src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+                src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=450&fit=crop"
                 alt="Yan Texeira - Documentary"
                 loading="lazy"
               />
@@ -75,7 +87,7 @@
           <div class="about-image fade-in" style="direction: ltr">
             <div class="video-placeholder">
               <img
-                src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif"
+                src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=450&fit=crop"
                 alt="A Celebration of Life - Short Film"
                 loading="lazy"
               />
@@ -86,7 +98,7 @@
             <div class="about-label">
               <span class="label">Short Film</span>
             </div>
-            <h2 class="headline-lg mb-md">A Celebration of Life</h2>
+            <h2 class="headline-subhead mb-md">A CELEBRATION OF LIFE</h2>
             <p class="text-body mb-md">
               A narrative short film exploring themes of memory, loss, and the moments that define
               us. Shot on location in London.
@@ -95,7 +107,7 @@
               The film follows a family gathering that becomes an unexpected journey through shared
               memories and unspoken truths.
             </p>
-            <p class="label">Role: Written / Produced / Directed / Shot / Edited</p>
+            <p class="text-label">Role: Written / Produced / Directed / Shot / Edited</p>
           </div>
         </div>
       </div>
@@ -109,7 +121,7 @@
             <div class="about-label">
               <span class="label">Short Film</span>
             </div>
-            <h2 class="headline-lg mb-md">An Unknown Reality</h2>
+            <h2 class="headline-subhead mb-md">AN UNKNOWN REALITY</h2>
             <p class="text-body mb-md">
               A psychological short film that blurs the line between perception and reality. The
               story follows a character questioning the nature of their existence.
@@ -118,12 +130,12 @@
               Exploring themes of consciousness and identity through a visual narrative that
               challenges viewers' expectations.
             </p>
-            <p class="label">Role: Written / Produced / Directed / Shot / Edited</p>
+            <p class="text-label">Role: Written / Produced / Directed / Shot / Edited</p>
           </div>
           <div class="about-image fade-in">
             <div class="video-placeholder">
               <img
-                src="https://media.giphy.com/media/l0MYGb1LuZ3n7dRnO/giphy.gif"
+                src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=450&fit=crop"
                 alt="An Unknown Reality - Short Film"
                 loading="lazy"
               />
@@ -141,7 +153,7 @@
           <div class="about-image fade-in" style="direction: ltr">
             <div class="video-placeholder">
               <img
-                src="https://media.giphy.com/media/xUPGcmvgjMIEhy6jZu/giphy.gif"
+                src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&h=450&fit=crop"
                 alt="Homegrown - Branded Content"
                 loading="lazy"
               />
@@ -152,7 +164,7 @@
             <div class="about-label">
               <span class="label">Branded Content</span>
             </div>
-            <h2 class="headline-lg mb-md">Homegrown</h2>
+            <h2 class="headline-subhead mb-md">HOMEGROWN</h2>
             <p class="text-body mb-md">
               A brand film created for a local sustainable food company, showcasing their
               farm-to-table philosophy and commitment to quality.
@@ -161,7 +173,7 @@
               The project combined documentary-style filming with carefully crafted commercial
               visuals to tell an authentic brand story.
             </p>
-            <p class="label">Role: Produced / Directed / Shot / Edited</p>
+            <p class="text-label">Role: Produced / Directed / Shot / Edited</p>
           </div>
         </div>
       </div>
@@ -175,7 +187,7 @@
             <div class="about-label">
               <span class="label">Short Film</span>
             </div>
-            <h2 class="headline-lg mb-md">Community</h2>
+            <h2 class="headline-subhead mb-md">COMMUNITY</h2>
             <p class="text-body mb-md">
               A short film examining the bonds that form within urban communities and the spaces
               that bring people together.
@@ -184,12 +196,12 @@
               Served as Director of Photography on this collaborative project, focusing on capturing
               intimate moments within public spaces.
             </p>
-            <p class="label">Role: Director of Photography</p>
+            <p class="text-label">Role: Director of Photography</p>
           </div>
           <div class="about-image fade-in">
             <div class="video-placeholder">
               <img
-                src="https://media.giphy.com/media/3o7btZ1Gm7ZL25pLMs/giphy.gif"
+                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=450&fit=crop"
                 alt="Community - Short Film"
                 loading="lazy"
               />
@@ -204,8 +216,8 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-content">
-          <p class="cta-subtitle">Have a project in mind?</p>
-          <h2 class="cta-title"><a href="contact.html">Let's create together</a></h2>
+          <p class="cta-subtitle fade-in">Have a project in mind?</p>
+          <h2 class="cta-title fade-in"><a href="contact.html">LET'S CREATE TOGETHER</a></h2>
         </div>
       </div>
     </section>
@@ -219,26 +231,26 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
+              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Location</h4>
-            <p class="footer-links">
-              <span>London, UK</span>
-            </p>
-            <p class="footer-location-time" id="currentTime"></p>
+            <ul class="footer-links">
+              <li><span>London, UK</span></li>
+              <li><span id="currentTime"></span></li>
+            </ul>
           </div>
 
           <div>
             <h4 class="footer-title">Socials</h4>
             <ul class="footer-links">
-              <li><a href="https://www.instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li>
-                <a href="https://www.linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a>
-              </li>
+              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
+              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
               <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
             </ul>
           </div>
@@ -246,19 +258,23 @@
           <div>
             <h4 class="footer-title">Newsletter</h4>
             <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address*" required />
+              <input type="email" placeholder="E-mail Address" required />
               <button type="submit">→</button>
             </form>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Pedro Pucheu</p>
+          <p>&copy; 2026 Pedro Pucheu</p>
           <p>London, UK</p>
         </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/gsap-animations.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,29 +1,17 @@
 /* ============================================
    PEDRO PUCHEU PORTFOLIO - MAIN JS
-   Jorge Style - Minimalist, Professional
+   Ollie Studio Design - GSAP Integration
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Page Loader - Luca Style Animation
-  initPageLoader();
-
   // Navigation
   initNavigation();
-
-  // Scroll Animations
-  initScrollAnimations();
 
   // Image Loading
   initImageLoading();
 
-  // Gallery Filter
-  initGalleryFilter();
-
   // Lightbox
   initLightbox();
-
-  // Team Carousel
-  initTeamCarousel();
 
   // Live Time
   initLiveTime();
@@ -32,92 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initShowreel();
 });
 
-/* Page Loader - Luca Style Image Expansion */
-function initPageLoader() {
-  const pageLoader = document.getElementById('pageLoader');
-  if (!pageLoader) return;
-
-  const hasImageLoader = pageLoader.querySelector('.loader-image-container');
-
-  if (hasImageLoader) {
-    // Add loading class to body
-    document.body.classList.add('loading-active');
-
-    // Luca-style image expansion animation
-    const loaderImage = pageLoader.querySelector('.loader-image');
-
-    // Wait for image to load
-    if (loaderImage.complete) {
-      startLoaderAnimation();
-    } else {
-      loaderImage.addEventListener('load', startLoaderAnimation);
-    }
-
-    function startLoaderAnimation() {
-      // Start expansion after brief delay
-      setTimeout(() => {
-        pageLoader.classList.add('expanding');
-      }, 300);
-
-      // Hide loader on scroll, click, or timeout
-      let loaderDismissed = false;
-
-      function dismissLoader() {
-        if (loaderDismissed) return;
-        loaderDismissed = true;
-        pageLoader.classList.add('hidden');
-        document.body.style.overflow = '';
-        document.body.classList.remove('loading-active');
-        document.body.classList.add('loading-complete');
-      }
-
-      // Prevent scroll while loader is visible
-      document.body.style.overflow = 'hidden';
-
-      // Auto-dismiss after animation completes
-      setTimeout(() => {
-        // Add click/scroll listeners after expansion
-        pageLoader.addEventListener('click', dismissLoader, { once: true });
-        window.addEventListener('wheel', dismissLoader, { once: true });
-        window.addEventListener('touchstart', dismissLoader, { once: true });
-
-        // Auto-dismiss after 3.5 seconds total
-        setTimeout(dismissLoader, 2000);
-      }, 1500);
-    }
-  } else {
-    // Simple text loader fallback
-    setTimeout(() => {
-      pageLoader.classList.add('hidden');
-    }, 800);
-  }
-}
-
-/* Navigation */
+/* === NAVIGATION === */
 function initNavigation() {
   const nav = document.getElementById('mainNav');
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
-
-  // Scroll behavior
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-
-    lastScroll = currentScroll;
-  });
 
   // Mobile toggle
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       navToggle.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
     });
 
     // Close on link click
@@ -125,34 +39,38 @@ function initNavigation() {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        document.body.style.overflow = '';
       });
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Scroll behavior for nav background (fallback if GSAP not loaded)
+  if (nav && typeof gsap === 'undefined') {
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+
+      lastScroll = currentScroll;
     });
   }
 }
 
-/* Scroll Animations - Jorge Style */
-function initScrollAnimations() {
-  const fadeElements = document.querySelectorAll('.fade-in');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  fadeElements.forEach((el) => observer.observe(el));
-}
-
-/* Image Loading Animation */
+/* === IMAGE LOADING ANIMATION === */
 function initImageLoading() {
   const images = document.querySelectorAll('img');
 
@@ -163,7 +81,6 @@ function initImageLoading() {
       img.addEventListener('load', () => {
         img.classList.add('loaded');
       });
-      // Handle error case - still show image if load fails
       img.addEventListener('error', () => {
         img.classList.add('loaded');
       });
@@ -171,39 +88,7 @@ function initImageLoading() {
   });
 }
 
-/* Gallery Filter */
-function initGalleryFilter() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      // Update active button
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-
-      galleryItems.forEach((item) => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.style.display = 'block';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
-          }, 50);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.8)';
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 300);
-        }
-      });
-    });
-  });
-}
-
-/* Lightbox */
+/* === LIGHTBOX === */
 function initLightbox() {
   const lightbox = document.getElementById('lightbox');
   const lightboxImage = document.getElementById('lightboxImage');
@@ -216,7 +101,13 @@ function initLightbox() {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
       if (img) {
-        lightboxImage.src = img.src;
+        // Get high-res version
+        let src = img.src;
+        // If using Unsplash, get larger size
+        if (src.includes('unsplash.com')) {
+          src = src.replace(/w=\d+/, 'w=1600').replace(/h=\d+/, 'h=1600');
+        }
+        lightboxImage.src = src;
         lightboxImage.alt = img.alt;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -246,32 +137,7 @@ function initLightbox() {
   }
 }
 
-/* Team Carousel */
-function initTeamCarousel() {
-  const carousel = document.getElementById('teamCarousel');
-  const prevBtn = document.getElementById('teamPrev');
-  const nextBtn = document.getElementById('teamNext');
-
-  if (!carousel || !prevBtn || !nextBtn) return;
-
-  const scrollAmount = 300;
-
-  prevBtn.addEventListener('click', () => {
-    carousel.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth',
-    });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    carousel.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth',
-    });
-  });
-}
-
-/* Live Time */
+/* === LIVE TIME === */
 function initLiveTime() {
   const timeEl = document.getElementById('currentTime');
   if (!timeEl) return;
@@ -292,21 +158,30 @@ function initLiveTime() {
   setInterval(updateTime, 1000);
 }
 
-/* Showreel Video Player */
+/* === SHOWREEL VIDEO PLAYER === */
 function initShowreel() {
   const container = document.getElementById('showreelContainer');
   const video = document.getElementById('showreelVideo');
+  const overlay = document.getElementById('showreelPlayOverlay');
 
   if (!container || !video) return;
 
-  container.addEventListener('click', () => {
-    if (video.paused) {
+  // Click on overlay to start video
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      e.stopPropagation();
       video.play();
       container.classList.add('playing');
-    } else {
-      video.pause();
-      container.classList.remove('playing');
-    }
+    });
+  }
+
+  // Track video state changes
+  video.addEventListener('play', () => {
+    container.classList.add('playing');
+  });
+
+  video.addEventListener('pause', () => {
+    container.classList.remove('playing');
   });
 
   video.addEventListener('ended', () => {
@@ -319,7 +194,6 @@ function initShowreel() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting && !video.paused) {
           video.pause();
-          container.classList.remove('playing');
         }
       });
     },
@@ -329,14 +203,24 @@ function initShowreel() {
   observer.observe(container);
 }
 
-/* Smooth scroll for anchor links */
+/* === SMOOTH SCROLL FOR ANCHOR LINKS === */
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
-    if (href !== '#') {
+    if (href === '#') return;
+
+    const target = document.querySelector(href);
+    if (target) {
       e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
+
+      // Use GSAP if available, otherwise native smooth scroll
+      if (typeof gsap !== 'undefined' && gsap.plugins && gsap.plugins.scrollTo) {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: { y: target, offsetY: 80 },
+          ease: 'power3.inOut',
+        });
+      } else {
         target.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -345,3 +229,50 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+/* === FORM VALIDATION FEEDBACK === */
+const forms = document.querySelectorAll('form');
+forms.forEach((form) => {
+  const inputs = form.querySelectorAll('input, textarea');
+
+  inputs.forEach((input) => {
+    // Add focus styling
+    input.addEventListener('focus', () => {
+      input.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', () => {
+      input.parentElement.classList.remove('focused');
+      if (input.value) {
+        input.classList.add('has-value');
+      } else {
+        input.classList.remove('has-value');
+      }
+    });
+  });
+});
+
+/* === VIDEO PLACEHOLDERS - PLAY ON CLICK === */
+document.querySelectorAll('.video-placeholder').forEach((placeholder) => {
+  placeholder.addEventListener('click', () => {
+    // This is a placeholder for video playback functionality
+    // In production, this would open a video modal or navigate to video page
+    console.log('Video placeholder clicked - implement video playback');
+  });
+});
+
+/* === PREFERS REDUCED MOTION === */
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (prefersReducedMotion.matches) {
+  // Disable GSAP animations if user prefers reduced motion
+  if (typeof gsap !== 'undefined') {
+    gsap.globalTimeline.pause();
+  }
+
+  // Remove animation classes
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+}

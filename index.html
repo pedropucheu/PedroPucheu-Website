@@ -5,284 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Pedro Pucheu - London based Filmmaker and Photographer." />
     <title>Pedro Pucheu | Filmmaker & Photographer</title>
-    <link rel="stylesheet" href="css/home.css?v=1769107123" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/ollie.css" />
   </head>
   <body>
-    <!-- LANDING HERO: Fullscreen Image + Bottom Nav Only -->
-    <section class="landing-hero">
-      <div class="landing-hero-bg">
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="stills.html" class="nav-link">Stills</a></li>
+          <li><a href="motion.html" class="nav-link">Motion</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: Hero (Ollie Style - Giant Name at Bottom) -->
+    <section class="section-hero">
+      <div class="hero-bg">
         <img
           src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1920&h=1080&fit=crop"
           alt="Pedro Pucheu"
+          class="parallax-bg"
         />
+        <div class="hero-overlay"></div>
       </div>
-
-      <!-- Bottom Navigation -->
-      <nav class="landing-nav">
-        <a href="index.html" class="landing-logo">PEDRO PUCHEU</a>
-        <ul class="landing-menu">
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="stills.html">Stills</a></li>
-          <li><a href="motion.html">Motion</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="hero-content">
+        <h1 class="hero-title">PEDRO PUCHEU</h1>
+        <p class="hero-subtitle">Filmmaker & Photographer</p>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+      </div>
     </section>
 
-    <!-- Fixed Top Nav (appears after scroll) -->
-    <nav class="top-nav" id="topNav">
-      <a href="index.html" class="top-logo">PEDRO PUCHEU</a>
-      <ul class="top-menu">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="stills.html">Stills</a></li>
-        <li><a href="motion.html">Motion</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Intro Section -->
-    <section class="intro-section">
-      <div class="intro-content">
-        <h1 class="intro-title">Pedro Pucheu is a London-based filmmaker and photographer.</h1>
-        <p class="intro-subtitle">
-          Creating compelling visual narratives through film and photography. Working with brands
-          and artists to bring their stories to life.
+    <!-- SECTION 2: Text Reveal (Ollie Style - White BG, Gray to Black) -->
+    <section class="section-text-reveal">
+      <div class="text-reveal-content">
+        <p class="text-reveal">
+          PEDRO IS A LONDON-BASED CREATIVE FILMMAKER AND PHOTOGRAPHER
         </p>
       </div>
     </section>
 
-    <!-- Showreel Section -->
-    <section class="showreel-section fade-in">
-      <div class="showreel-container" id="showreelContainer">
+    <!-- SECTION 3: About Text with Inline Images (Ollie Style) -->
+    <section class="section-about-text">
+      <div class="about-text-content">
+        <p class="about-text-reveal">
+          I AM <span class="inline-image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=130&fit=crop" alt="Portrait" /></span> A PASSIONATE STORYTELLER WHO DEEPLY VALUES THE ART OF VISUAL NARRATIVE. <span class="inline-image"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=200&h=130&fit=crop" alt="Filmmaking" /></span> SPECIALIZING IN DOCUMENTARY AND COMMERCIAL WORK, I CREATE COMPELLING CONTENT THAT RESONATES WITH AUDIENCES AND BRINGS STORIES TO LIFE.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Rotating Box Transition (Ollie Style) -->
+    <section class="section-rotating-box">
+      <div class="rotating-box">
+        <p class="rotating-box-text">
+          MOVEMENT EXISTS IN EVERY ASPECT OF OUR LIFE, AND IS THE BEST WAY TO TELL A STORY.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Quote (Ollie Style - Black BG) -->
+    <section class="section-quote">
+      <div class="quote-content fade-in">
+        <p class="quote-text">
+          "CRAFTING COMPELLING VISUAL NARRATIVES THROUGH THE LENS OF FILM AND PHOTOGRAPHY"
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Selected Works (Ollie Style - Large Cards) -->
+    <section class="section-selected-works">
+      <div class="container">
+        <div class="selected-works-header fade-in">
+          <h2 class="selected-works-title">SELECTED WORKS</h2>
+        </div>
+        <div class="works-list">
+          <!-- Work Item 1 - Centered -->
+          <a href="motion.html#yan-texeira" class="work-item">
+            <div class="work-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1200&h=750&fit=crop"
+                alt="Yan Texeira"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">YAN TEXEIRA</h3>
+              <p class="work-item-category">Short Documentary</p>
+            </div>
+          </a>
+
+          <!-- Work Item 2 - Left Aligned -->
+          <a href="motion.html#celebration" class="work-item align-left">
+            <div class="work-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=750&fit=crop"
+                alt="A Celebration of Life"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">A CELEBRATION OF LIFE</h3>
+              <p class="work-item-category">Short Film</p>
+            </div>
+          </a>
+
+          <!-- Work Item 3 - Right Aligned -->
+          <a href="motion.html#unknown-reality" class="work-item align-right">
+            <div class="work-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1200&h=750&fit=crop"
+                alt="An Unknown Reality"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">AN UNKNOWN REALITY</h3>
+              <p class="work-item-category">Short Film</p>
+            </div>
+          </a>
+
+          <!-- Work Item 4 - Centered -->
+          <a href="stills.html" class="work-item">
+            <div class="work-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=750&fit=crop"
+                alt="Photography"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">PHOTOGRAPHY</h3>
+              <p class="work-item-category">Portraits & Editorial</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Reel (Ollie Style - Full Bleed Video) -->
+    <section class="section-reel">
+      <div class="reel-video-container" id="showreelContainer">
         <video
-          class="showreel-video"
+          class="reel-video"
           id="showreelVideo"
           preload="metadata"
           playsinline
+          muted
+          loop
+          poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1920&h=1080&fit=crop"
         >
-          <source src="videos/showreel.mp4" type="video/mp4">
+          <source src="videos/showreel.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
+        <div class="reel-overlay">
+          <h2 class="reel-label">REEL '26</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Services with Video Background (Ollie Style) -->
+    <section class="section-services-video">
+      <div class="services-video-bg">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1920&h=1080&fit=crop"
+        >
+          <source src="videos/services-bg.mp4" type="video/mp4" />
+        </video>
+        <div class="services-video-overlay"></div>
+      </div>
+      <div class="services-video-content">
+        <div class="services-list-horizontal">
+          <span class="service-name">Film Production</span>
+          <span class="service-name">Documentary</span>
+          <span class="service-name">Photography</span>
+          <span class="service-name">Commercial</span>
+          <span class="service-name">Music Videos</span>
+          <span class="service-name">Brand Content</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CTA (Ollie Style - with BG Image) -->
+    <section class="section-cta">
+      <div class="cta-bg">
         <img
-          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1920&h=1080&fit=crop"
-          alt="Showreel Poster"
-          class="showreel-poster"
+          src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920&h=1080&fit=crop"
+          alt="CTA Background"
         />
-        <div class="showreel-play"></div>
       </div>
-      <p class="showreel-label">Showreel 2024</p>
-    </section>
-
-    <!-- Services Grid Section -->
-    <section class="services-grid-section">
-      <h2 class="services-grid-title fade-in">SERVICES</h2>
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=1000&fit=crop" alt="Film Production" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">FILM PRODUCTION</h3>
-            <p class="service-card-description">Crafting narrative and documentary films that tell meaningful stories. From concept development to final cut, bringing cinematic vision to life.</p>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=1000&fit=crop" alt="Photography" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">PHOTOGRAPHY</h3>
-            <p class="service-card-description">Capturing compelling visual stories through portraits, editorial, and commercial photography. Bringing moments to life with artistic vision.</p>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=1000&fit=crop" alt="Commercial Content" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">COMMERCIAL CONTENT</h3>
-            <p class="service-card-description">Professional video production for brands, products, and commercial campaigns. Creating compelling visual stories that drive engagement and results.</p>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=1000&fit=crop" alt="Documentary" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">DOCUMENTARY</h3>
-            <p class="service-card-description">Authentic documentary storytelling that shines a light on compelling subjects and real-world stories. Capturing truth through cinematic lens.</p>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=1000&fit=crop" alt="Music Videos" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">MUSIC VIDEOS</h3>
-            <p class="service-card-description">Creative visual interpretations that bring music to life. Collaborating with artists to create memorable and impactful music videos.</p>
-          </div>
-        </div>
-
-        <div class="service-card fade-in">
-          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=1000&fit=crop" alt="Event Coverage" class="service-card-bg" loading="lazy">
-          <div class="service-card-content">
-            <h3 class="service-card-title">EVENT COVERAGE</h3>
-            <p class="service-card-description">Professional coverage of events, competitions, and gatherings with cinematic quality. Capturing the energy and emotion of live moments.</p>
-          </div>
-        </div>
+      <div class="cta-content">
+        <p class="cta-subtitle fade-in">Feeling inspired for a new project?</p>
+        <h2 class="cta-title fade-in">
+          <a href="contact.html">LET'S WORK TOGETHER</a>
+        </h2>
+        <a href="contact.html" class="btn btn-outline fade-in">
+          Contact <span class="btn-arrow">→</span>
+        </a>
       </div>
     </section>
 
-    <!-- Latest Work Label -->
-    <section class="work-label-section">
-      <p class="work-label fade-in">LATEST WORK</p>
-    </section>
-
-    <!-- Projects Grid - Jorge Style -->
-    <div class="projects-wrapper">
-      <!-- Project: YAN TEXEIRA -->
-      <article class="project-section fade-in">
-        <div class="project-media">
-          <img
-            src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1400&h=900&fit=crop"
-            alt="Yan Texeira"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-text">
-          <h2 class="project-title">YAN TEXEIRA</h2>
-          <p class="project-desc">
-            A short documentary following the journey of professional boxer Yan Texeira as he prepares
-            for one of the most important fights of his career.
-          </p>
-          <div class="project-tags">
-            <span class="tag">DOCUMENTARY</span>
-            <span class="tag">FILM</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project: A CELEBRATION OF LIFE -->
-      <article class="project-section fade-in">
-        <div class="project-media">
-          <img
-            src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1400&h=900&fit=crop"
-            alt="A Celebration of Life"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-text">
-          <h2 class="project-title">A CELEBRATION OF LIFE</h2>
-          <p class="project-desc">
-            After running over their son's dog, a soon-to-be divorced couple must navigate their grief
-            and guilt in this emotionally charged short film.
-          </p>
-          <div class="project-tags">
-            <span class="tag">SHORT FILM</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project: AN UNKNOWN REALITY -->
-      <article class="project-section fade-in">
-        <div class="project-media">
-          <img
-            src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1400&h=900&fit=crop"
-            alt="An Unknown Reality"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-text">
-          <h2 class="project-title">AN UNKNOWN REALITY</h2>
-          <p class="project-desc">
-            In a dystopian realm where consciousness is trapped within neural implants, one man must
-            fight to break free from the system.
-          </p>
-          <div class="project-tags">
-            <span class="tag">SHORT FILM</span>
-            <span class="tag">FILM</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project: PORTRAITS -->
-      <article class="project-section fade-in">
-        <div class="project-media">
-          <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1400&h=900&fit=crop"
-            alt="Portraits"
-            loading="lazy"
-          />
-        </div>
-        <div class="project-text">
-          <h2 class="project-title">PORTRAITS</h2>
-          <p class="project-desc">
-            A collection of intimate portrait work capturing the essence and emotion of subjects
-            through careful composition and lighting.
-          </p>
-          <div class="project-tags">
-            <span class="tag">PHOTOGRAPHY</span>
-            <span class="tag">COMMERCIAL</span>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <!-- View All Work Button -->
-    <section class="view-all-section">
-      <a href="work.html" class="view-all-btn fade-in">VIEW ALL WORK</a>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-section">
-      <div class="footer-content fade-in">
-        <div class="footer-left">
-          <h2>Let's set things in motion,<br />Contact us</h2>
-        </div>
-        <div class="footer-right">
-          <div class="footer-col">
-            <ul>
-              <li><a href="work.html">WORK</a></li>
-              <li><a href="about.html">ABOUT</a></li>
-              <li><a href="stills.html">STILLS</a></li>
-              <li><a href="motion.html">MOTION</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
+    <!-- Footer (Ollie Style - with Giant Logo Watermark) -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h4 class="footer-title">Sitemap</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="stills.html">Stills</a></li>
+              <li><a href="motion.html">Motion</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <ul>
-              <li><a href="https://instagram.com/plp_visuals" target="_blank">INSTAGRAM</a></li>
-              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LINKEDIN</a></li>
-              <li><a href="https://youtube.com" target="_blank">YOUTUBE</a></li>
-              <li><a href="https://vimeo.com/pedropucheu" target="_blank">VIMEO</a></li>
+
+          <div>
+            <h4 class="footer-title">Location</h4>
+            <ul class="footer-links">
+              <li><span>London, United Kingdom</span></li>
+              <li><span>Available Worldwide</span></li>
+              <li><span id="currentTime"></span></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <ul>
-              <li>LONDON-BASED</li>
-              <li>FILMMAKER</li>
-              <li>PHOTOGRAPHER</li>
+
+          <div>
+            <h4 class="footer-title">Connect</h4>
+            <ul class="footer-links">
+              <li><a href="https://instagram.com/plp_visuals" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener">Vimeo</a></li>
+              <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+              <li><a href="mailto:hello@pedropucheu.com">hello@pedropucheu.com</a></li>
             </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Stay Updated</h4>
+            <p class="footer-links" style="margin-bottom: var(--space-md);">
+              <span>Subscribe for updates on new projects and behind-the-scenes content.</span>
+            </p>
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit">→</button>
+            </form>
           </div>
         </div>
-      </div>
 
-      <!-- Giant Logo Watermark -->
-      <div class="footer-logo">
-        <h1>PEDRO PUCHEU</h1>
-      </div>
+        <!-- Giant Logo Watermark -->
+        <div class="footer-logo">
+          <h1>PEDRO PUCHEU</h1>
+        </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 PEDRO PUCHEU</p>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Pedro Pucheu. All rights reserved.</p>
+          <p>Crafted in London</p>
+        </div>
       </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/gsap-animations.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      // Show top nav on scroll
-      window.addEventListener('scroll', function () {
-        const topNav = document.getElementById('topNav');
-        if (window.scrollY > window.innerHeight - 100) {
-          topNav.classList.add('visible');
-        } else {
-          topNav.classList.remove('visible');
-        }
-      });
-    </script>
   </body>
 </html>
