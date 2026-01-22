@@ -1,7 +1,27 @@
 /* ============================================
    WEBSITE-STYLE GLOBAL CSS
-   Minimalist grayscale aesthetic for all pages
+   Jorge-inspired minimalist design system
    ============================================ */
+
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Jorge Design System Variables */
+:root {
+  /* Colors */
+  --color-bg: #0f0f0f;
+  --color-bg-secondary: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-secondary: #a6a6a6;
+  --color-accent: #09f;
+  --color-divider: #1a1a1a;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-medium: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-slow: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
 
 /* Reset & Base */
 * {
@@ -10,10 +30,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #000000;
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -26,7 +50,7 @@ body {
 }
 
 /* ============================================
-   NAVIGATION
+   NAVIGATION - Jorge Style
    ============================================ */
 .top-nav {
   position: fixed;
@@ -37,11 +61,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
-  background: rgba(0, 0, 0, 0.95);
+  padding: 1.5rem 4rem;
+  background: rgba(15, 15, 15, 0.95);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-divider);
   transform: translateY(-100%);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-medium);
 }
 
 .top-nav.visible {
@@ -49,21 +74,23 @@ body {
 }
 
 .top-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: color var(--transition-fast);
 }
 
 .top-logo:hover {
-  opacity: 0.6;
+  color: var(--color-accent);
 }
 
 .top-menu {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -74,18 +101,33 @@ body {
 }
 
 .top-menu a {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  position: relative;
+  transition: color var(--transition-fast);
 }
 
-.top-menu a:hover {
-  opacity: 0.6;
+.top-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-text);
+  transition: width var(--transition-medium);
 }
 
-/* Landing Navigation (for homepage) */
+.top-menu a:hover::after {
+  width: 100%;
+}
+
+/* Landing Navigation (for homepage) - Jorge Style */
 .landing-nav {
   position: absolute;
   bottom: 0;
@@ -100,21 +142,23 @@ body {
 }
 
 .landing-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: color var(--transition-fast);
 }
 
 .landing-logo:hover {
-  opacity: 0.6;
+  color: var(--color-accent);
 }
 
 .landing-menu {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -125,15 +169,30 @@ body {
 }
 
 .landing-menu a {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  position: relative;
+  transition: color var(--transition-fast);
 }
 
-.landing-menu a:hover {
-  opacity: 0.6;
+.landing-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-text);
+  transition: width var(--transition-medium);
+}
+
+.landing-menu a:hover::after {
+  width: 100%;
 }
 
 /* ============================================
@@ -167,19 +226,27 @@ body {
 }
 
 /* ============================================
-   PAGE HEADER
+   PAGE HEADER - Jorge Style
    ============================================ */
 .page-header {
-  padding: 12rem 4rem 4rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10rem 4rem 3rem;
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-bg);
 }
 
 .page-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
   margin: 0;
+  text-transform: uppercase;
+}
+
+.page-title span {
+  color: var(--color-text-secondary);
+  font-weight: 400;
 }
 
 .page-header-row {
@@ -189,14 +256,18 @@ body {
 }
 
 .view-toggle {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-fast);
 }
 
 .view-toggle:hover {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 /* ============================================
@@ -217,51 +288,58 @@ body {
 }
 
 /* ============================================
-   TYPOGRAPHY
+   TYPOGRAPHY - Jorge Style
    ============================================ */
 .headline-xl {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: var(--color-text);
 }
 
 .headline-lg {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .headline-md {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--color-text);
+  text-transform: uppercase;
 }
 
 .text-body {
-  font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
 }
 
 .text-statement {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  font-weight: 300;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
 }
 
 .label {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
   text-transform: uppercase;
 }
 
@@ -890,26 +968,32 @@ body {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - Jorge Style
    ============================================ */
 .footer {
-  padding: 6rem 4rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 80px 4rem 2rem;
+  border-top: 1px solid var(--color-divider);
+  background: var(--color-bg);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
+  gap: 40px;
   margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
 }
 
 .footer-links {
@@ -922,19 +1006,26 @@ body {
 
 .footer-links a,
 .footer-links span {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+  display: inline-block;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: var(--color-text);
+  transform: translateX(4px);
 }
 
 .footer-location-time {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
   margin-top: 0.5rem;
 }
 
@@ -944,44 +1035,59 @@ body {
 }
 
 .footer-newsletter input {
+  font-family: 'Inter', sans-serif;
   flex: 1;
   padding: 0.75rem;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  font-size: 0.9rem;
+  border: 1px solid var(--color-divider);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  transition: border-color var(--transition-fast);
 }
 
 .footer-newsletter input:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-newsletter input::placeholder {
+  color: var(--color-text-secondary);
 }
 
 .footer-newsletter button {
-  padding: 0.75rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  padding: 0.75rem 1.25rem;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+  border: 1px solid var(--color-divider);
+  color: var(--color-text);
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .footer-newsletter button:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: var(--color-bg-secondary);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--color-divider);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-bottom p {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
 }
 
 /* ============================================
@@ -1070,19 +1176,82 @@ body {
 }
 
 /* ============================================
-   ANIMATIONS
+   ANIMATIONS - Jorge Style
    ============================================ */
+
+/* Scroll-triggered fade-in animations */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Staggered delays for grid items */
+.fade-in:nth-child(1) { transition-delay: 0s; }
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.15s; }
+.fade-in:nth-child(4) { transition-delay: 0.2s; }
+.fade-in:nth-child(5) { transition-delay: 0.25s; }
+.fade-in:nth-child(6) { transition-delay: 0.3s; }
+
+/* Image loading animation */
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Page load animation */
+@keyframes pageLoad {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scale on hover for images */
+.scale-on-hover {
+  transition: transform var(--transition-slow);
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Underline animation for links */
+.underline-hover {
+  position: relative;
+}
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-text);
+  transition: width var(--transition-medium);
+}
+
+.underline-hover:hover::after {
+  width: 100%;
 }
 
 /* ============================================

@@ -1,6 +1,6 @@
 /* ============================================
    PEDRO PUCHEU PORTFOLIO - MAIN JS
-   Luca Style - Light, Minimal
+   Jorge Style - Minimalist, Professional
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll Animations
   initScrollAnimations();
+
+  // Image Loading
+  initImageLoading();
 
   // Gallery Filter
   initGalleryFilter();
@@ -124,28 +127,45 @@ function initNavigation() {
   }
 }
 
-/* Scroll Animations */
+/* Scroll Animations - Jorge Style */
 function initScrollAnimations() {
   const fadeElements = document.querySelectorAll('.fade-in');
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
+    rootMargin: '0px 0px -50px 0px',
     threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, index * 100);
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
   fadeElements.forEach((el) => observer.observe(el));
+}
+
+/* Image Loading Animation */
+function initImageLoading() {
+  const images = document.querySelectorAll('img');
+
+  images.forEach((img) => {
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.addEventListener('load', () => {
+        img.classList.add('loaded');
+      });
+      // Handle error case - still show image if load fails
+      img.addEventListener('error', () => {
+        img.classList.add('loaded');
+      });
+    }
+  });
 }
 
 /* Gallery Filter */
