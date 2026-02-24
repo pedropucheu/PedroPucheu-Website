@@ -3,328 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="About Pedro Pucheu - London based Filmmaker and Photographer."
-    />
+    <meta name="description" content="About Pedro Pucheu - London based Filmmaker and Photographer." />
     <title>About | Pedro Pucheu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/ollie.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
-  <body>
+  <body class="page">
     <!-- Navigation -->
-    <nav class="nav scrolled" id="mainNav">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="stills.html" class="nav-link">Stills</a></li>
-          <li><a href="motion.html" class="nav-link">Motion</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav class="nav" id="mainNav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navDrawer"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
         </button>
+        <ul class="nav__links" aria-label="Primary navigation">
+          <li><a href="work.html" class="nav__link">Work</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="stills.html" class="nav__link">Stills</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__drawer" id="navDrawer">
+        <nav aria-label="Mobile navigation">
+          <ul class="nav__drawer-links">
+            <li><a href="work.html" class="nav__link">Work</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="stills.html" class="nav__link">Stills</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </nav>
 
-    <!-- Hero Statement -->
-    <section class="hero-statement">
-      <div class="container">
-        <p class="statement-text-large fade-in">
-          A filmmaker and photographer driven by curiosity and craftsmanship. I collaborate with
-          brands and artists to push boundaries and create meaningful visual stories.
-        </p>
-      </div>
-    </section>
-
-    <!-- About Grid -->
-    <section class="section">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-content fade-in">
-            <div class="about-label">
-              <span class="label">My Vision</span>
-            </div>
-            <p class="text-body mb-md">
-              I craft visual narratives for forward-thinking brands and artists, combining cinematic
-              techniques with authentic storytelling to create impactful content.
-            </p>
-            <p class="text-body mb-md">
-              Based in London, I specialize in short films, documentaries, and commercial content.
-              Every project is an opportunity to craft a unique visual narrative that resonates with
-              audiences.
-            </p>
-            <p class="text-body">
-              My approach focuses on understanding the story behind each project, whether it's a
-              fighter's journey, a brand's identity, or an artist's vision. I believe in the power
-              of visual storytelling to create meaningful connections and evoke emotion.
-            </p>
+    <main>
+      <!-- Hero section -->
+      <section class="about-hero">
+        <div class="container about-hero__grid">
+          <div class="about-hero__image">
+            <img src="assets/images/pedro-portrait.webp" alt="Pedro Pucheu" />
           </div>
-          <div class="about-image fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop"
-              alt="Pedro Pucheu"
-            />
+          <div class="about-hero__content">
+            <h1 class="about-hero__title" data-animate>About</h1>
+            <p class="about-hero__lead" data-animate>
+              Pedro Pucheu is a London-based filmmaker and photographer with a cinematic eye for authentic storytelling. His work spans commercial brand films, narrative shorts, documentaries and editorial photography.
+            </p>
+            <p class="about-hero__body" data-animate>
+              From combat sports to fashion, food culture to community projects, Pedro collaborates closely with brands and artists to shape projects from concept through to final delivery. His approach is grounded — built on trust, preparation and a deep respect for the people and stories in front of the camera.
+            </p>
+            <p class="about-hero__body" data-animate>
+              Whether it's a brand film, a wedding, a documentary portrait or a photography commission, the goal is always the same: to create something honest, visually compelling and worth watching twice.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Services Section -->
-    <section class="section" style="border-top: 1px solid var(--color-border)">
-      <div class="container">
-        <h2 class="headline-section mb-xl fade-in">SERVICES</h2>
-        <div class="services-list">
-          <div class="service-item fade-in">
-            <h3 class="service-title">SHORT FILMS</h3>
-            <p class="service-description">
-              Narrative-driven short films that explore meaningful themes and connect with audiences
-              on an emotional level.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Film Production</span>
-              <span class="service-arrow">→</span>
+      <!-- Services detail -->
+      <section class="about-services section--xl">
+        <div class="container">
+          <h2 class="section-title" data-animate>What I offer</h2>
+          <div class="about-services__grid" data-animate>
+            <div class="about-service">
+              <h3>Video Production</h3>
+              <p>End-to-end video production for brands and creative projects. From concept development and scripting through filming, editing and colour grading. Commercials, brand films, corporate content and wedding cinematography — delivered with a cinematic sensibility.</p>
             </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">DOCUMENTARIES</h3>
-            <p class="service-description">
-              Authentic documentary storytelling that shines a light on compelling subjects and
-              real-world stories.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Documentary</span>
-              <span class="service-arrow">→</span>
+            <div class="about-service">
+              <h3>Photography</h3>
+              <p>Portrait, editorial and event photography with a focus on natural light, character and mood. Available for campaigns, personal branding, press and live events across London and beyond.</p>
             </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">COMMERCIAL CONTENT</h3>
-            <p class="service-description">
-              Brand content that creates powerful connections between businesses and their target
-              audiences.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Commercial</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">PHOTOGRAPHY</h3>
-            <p class="service-description">
-              Professional photography including portraits, food styling, and fashion/clothing work.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">MUSIC VIDEOS</h3>
-            <p class="service-description">
-              Creative visual interpretations that bring music to life through compelling
-              cinematography.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Music Video</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">EVENT COVERAGE</h3>
-            <p class="service-description">
-              Professional coverage of events, competitions, and gatherings with cinematic quality.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Events</span>
-              <span class="service-arrow">→</span>
+            <div class="about-service">
+              <h3>Narrative &amp; Documentary</h3>
+              <p>Short films and documentaries that explore real stories and real people. Character-driven work with attention to craft, pacing and emotional resonance — from intimate portraits to observational pieces.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Clients/Specialties Section -->
-    <section class="clients-section">
-      <div class="container">
-        <div class="clients-grid">
-          <div>
-            <span class="clients-label">Specialties</span>
-          </div>
-          <div class="clients-list">
-            <span>Combat Sports</span>
-            <span>Fashion & Lifestyle</span>
-            <span>Food & Beverage</span>
-            <span>Music & Entertainment</span>
-            <span>Sports & Fitness</span>
-            <span>Brand Content</span>
-          </div>
-          <div class="clients-list">
-            <span>Documentary</span>
-            <span>Short Film</span>
-            <span>Commercial</span>
-            <span>Portrait Photography</span>
-            <span>Event Coverage</span>
-            <span>Social Media Content</span>
-          </div>
+      <!-- CTA -->
+      <section class="section-cta-dark section--xl">
+        <div class="container stack-lg">
+          <h2 class="section-title" data-animate>Let's create<br />something.</h2>
+          <p class="cta-email"><a href="mailto:hello@pedropucheu.com">hello@pedropucheu.com</a></p>
+          <div data-animate><a href="contact.html" class="btn btn--primary">Get in touch</a></div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Featured Banner -->
-    <section class="featured-banner">
-      <div class="featured-banner-bg">
-        <img
-          src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1600&h=800&fit=crop"
-          alt="Featured Work"
-          loading="lazy"
-        />
-      </div>
-      <div class="featured-banner-content fade-in">
-        <p class="featured-banner-text">
-          Bold thinking, carefully refined through timeless visuals to spark lasting impact.
-        </p>
-        <a href="work.html" class="btn btn-light">View Work <span class="btn-arrow">→</span></a>
-      </div>
-    </section>
-
-    <!-- View Work Section -->
-    <section class="section">
-      <div class="container">
-        <div class="page-header-row mb-xl">
-          <h2 class="headline-section fade-in">SELECTED WORK</h2>
-          <a href="work.html" class="view-toggle">View All Projects</a>
-        </div>
-        <div class="projects-grid">
-          <a href="motion.html#yan-texeira" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&h=750&fit=crop"
-              alt="Yan Texeira"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">YAN TEXEIRA</h3>
-              <p class="project-card-subtitle">Short Documentary</p>
-            </div>
-          </a>
-
-          <a href="motion.html#celebration" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=750&fit=crop"
-              alt="A Celebration of Life"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">A CELEBRATION OF LIFE</h3>
-              <p class="project-card-subtitle">Short Film</p>
-            </div>
-          </a>
-
-          <a href="motion.html#unknown-reality" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=750&fit=crop"
-              alt="An Unknown Reality"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">AN UNKNOWN REALITY</h3>
-              <p class="project-card-subtitle">Short Film</p>
-            </div>
-          </a>
-
-          <a href="stills.html" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop"
-              alt="Photography"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">PHOTOGRAPHY</h3>
-              <p class="project-card-subtitle">Portraits & Editorial</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h4 class="footer-title">Sitemap</h4>
+      <div class="container stack-lg">
+        <div class="footer-top">
+          <nav aria-label="Footer navigation">
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
-              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Location</h4>
-            <ul class="footer-links">
-              <li><span>London, UK</span></li>
-              <li><span id="currentTime"></span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Socials</h4>
-            <ul class="footer-links">
-              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
-              <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Newsletter</h4>
-            <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address" required />
-              <button type="submit">→</button>
-            </form>
-          </div>
+          </nav>
+          <ul class="footer-links footer-links--social">
+            <li>
+              <a href="https://instagram.com/plp_visuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li>
+              <a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener noreferrer">Vimeo</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/pedropucheu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
         </div>
-
         <div class="footer-bottom">
-          <p>&copy; 2026 Pedro Pucheu</p>
-          <p>London, UK</p>
+          <p>&copy; 2026 Pedro Pucheu. All rights reserved.</p>
+        </div>
+        <div class="footer-mark">
+          <span>PEDRO&nbsp;PUCHEU</span>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/gsap-animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/pixel-trail.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

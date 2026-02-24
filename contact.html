@@ -3,299 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact Pedro Pucheu - London based Filmmaker and Photographer."
-    />
+    <meta name="description" content="Get in touch with Pedro Pucheu - Filmmaker and Photographer based in London." />
     <title>Contact | Pedro Pucheu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/ollie.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
-  <body>
+  <body class="page">
     <!-- Navigation -->
-    <nav class="nav scrolled" id="mainNav">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="stills.html" class="nav-link">Stills</a></li>
-          <li><a href="motion.html" class="nav-link">Motion</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav class="nav" id="mainNav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navDrawer"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
         </button>
+        <ul class="nav__links" aria-label="Primary navigation">
+          <li><a href="work.html" class="nav__link">Work</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="stills.html" class="nav__link">Stills</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__drawer" id="navDrawer">
+        <nav aria-label="Mobile navigation">
+          <ul class="nav__drawer-links">
+            <li><a href="work.html" class="nav__link">Work</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="stills.html" class="nav__link">Stills</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-      <div class="container">
-        <h1 class="page-title fade-in">GET IN TOUCH</h1>
-      </div>
-    </header>
-
-    <!-- Contact Grid -->
-    <section class="section" style="padding-top: 0">
-      <div class="container">
-        <div class="contact-grid">
-          <!-- Contact Info -->
-          <div class="contact-info fade-in">
-            <p class="text-statement mb-xl">
-              Have a project in mind? Let's discuss how we can bring your vision to life.
+    <main>
+      <section class="contact-section">
+        <div class="container contact-grid">
+          <!-- Left column: info -->
+          <div class="contact-info" data-animate>
+            <h1 class="contact-info__title">Let's get<br />in touch.</h1>
+            <p class="contact-info__body">
+              Ready to start a project? Whether it's a commercial, documentary, wedding
+              or photography session — drop a message and let's talk.
             </p>
-
-            <div class="contact-item">
-              <p class="contact-item-label">Email</p>
-              <p class="contact-item-value">
-                <a href="mailto:pedropucheu@gmail.com">pedropucheu@gmail.com</a>
-              </p>
-            </div>
-
-            <div class="contact-item">
-              <p class="contact-item-label">Location</p>
-              <p class="contact-item-value">London, United Kingdom</p>
-            </div>
-
-            <div class="contact-item">
-              <p class="contact-item-label">Available For</p>
-              <p class="contact-item-value">Freelance & Collaborations</p>
-            </div>
-
-            <div class="contact-item">
-              <p class="contact-item-label">Socials</p>
-              <p class="contact-item-value">
-                <a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a> ·
-                <a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a> ·
-                <a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a>
-              </p>
-            </div>
+            <ul class="contact-details">
+              <li>
+                <span class="contact-details__label">Email</span>
+                <a href="mailto:hello@pedropucheu.com">hello@pedropucheu.com</a>
+              </li>
+              <li>
+                <span class="contact-details__label">Location</span>
+                <span>London, UK</span>
+              </li>
+              <li>
+                <span class="contact-details__label">Social</span>
+                <div class="contact-socials">
+                  <a href="https://instagram.com/plp_visuals" target="_blank" rel="noopener">Instagram</a>
+                  <a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener">Vimeo</a>
+                  <a href="https://linkedin.com/in/pedropucheu" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <!-- Contact Form -->
-          <div class="fade-in">
-            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- Right column: form -->
+          <div class="contact-form-wrapper" data-animate>
+            <form class="contact-form" action="https://formspree.io/f/PLACEHOLDER" method="POST">
               <div class="form-group">
-                <label for="name" class="form-label">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-input"
-                  required
-                  placeholder="Your name"
-                />
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name" />
               </div>
-
               <div class="form-group">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-input"
-                  required
-                  placeholder="your@email.com"
-                />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
               </div>
-
               <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <div class="custom-select" id="subjectSelect">
-                  <div class="custom-select-trigger">
-                    <span>Select a subject</span>
-                    <span class="custom-select-arrow">▼</span>
-                  </div>
-                  <div class="custom-select-options">
-                    <div class="custom-select-option" data-value="Film Project">Film Project</div>
-                    <div class="custom-select-option" data-value="Photography Project">
-                      Photography Project
-                    </div>
-                    <div class="custom-select-option" data-value="Commercial/Brand Work">
-                      Commercial / Brand Work
-                    </div>
-                    <div class="custom-select-option" data-value="Collaboration">Collaboration</div>
-                    <div class="custom-select-option" data-value="Other">Other</div>
-                  </div>
-                  <input type="hidden" name="subject" id="subject" value="" />
-                </div>
+                <label for="project-type">Project type</label>
+                <select id="project-type" name="project-type">
+                  <option value="" disabled selected>Select...</option>
+                  <option value="commercial">Commercial / Brand Film</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="documentary">Documentary</option>
+                  <option value="photography">Photography</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
-
               <div class="form-group">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-textarea"
-                  required
-                  placeholder="Tell me about your project..."
-                ></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
               </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%">
-                Send Message <span class="btn-arrow">→</span>
-              </button>
+              <button type="submit" class="btn btn--primary btn--full">Send message</button>
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- View Work Section -->
-    <section class="section" style="border-top: 1px solid var(--color-border)">
-      <div class="container">
-        <div class="page-header-row mb-xl">
-          <h2 class="headline-section fade-in">EXPLORE MY WORK</h2>
-          <a href="work.html" class="view-toggle">View All Projects</a>
-        </div>
-        <div class="services-list">
-          <a href="motion.html" class="service-item fade-in" style="text-decoration: none">
-            <h3 class="service-title">MOTION</h3>
-            <p class="service-description">
-              View my film and video work including documentaries, short films, and branded content.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Film & Video</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </a>
-
-          <a href="stills.html" class="service-item fade-in" style="text-decoration: none">
-            <h3 class="service-title">PHOTOGRAPHY</h3>
-            <p class="service-description">
-              Browse my photography portfolio featuring portraits, food, and fashion work.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </a>
-
-          <a
-            href="fighting-productions.html"
-            class="service-item fade-in"
-            style="text-decoration: none"
-          >
-            <h3 class="service-title">FIGHTING PRODUCTIONS</h3>
-            <p class="service-description">
-              Learn about our video production company specializing in combat sports content.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Production Company</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </a>
-
-          <a href="about.html" class="service-item fade-in" style="text-decoration: none">
-            <h3 class="service-title">ABOUT</h3>
-            <p class="service-description">
-              Learn more about my background, approach, and the services I offer.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Background</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h4 class="footer-title">Sitemap</h4>
+      <div class="container stack-lg">
+        <div class="footer-top">
+          <nav aria-label="Footer navigation">
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
-              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Location</h4>
-            <ul class="footer-links">
-              <li><span>London, UK</span></li>
-              <li><span id="currentTime"></span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Socials</h4>
-            <ul class="footer-links">
-              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
-              <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Newsletter</h4>
-            <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address" required />
-              <button type="submit">→</button>
-            </form>
-          </div>
+          </nav>
+          <ul class="footer-links footer-links--social">
+            <li>
+              <a href="https://instagram.com/plp_visuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li>
+              <a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener noreferrer">Vimeo</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/pedropucheu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
         </div>
-
         <div class="footer-bottom">
-          <p>&copy; 2026 Pedro Pucheu</p>
-          <p>London, UK</p>
+          <p>&copy; 2026 Pedro Pucheu. All rights reserved.</p>
+        </div>
+        <div class="footer-mark">
+          <span>PEDRO&nbsp;PUCHEU</span>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/gsap-animations.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      // Custom Select Dropdown
-      document.querySelectorAll('.custom-select').forEach((select) => {
-        const trigger = select.querySelector('.custom-select-trigger');
-        const hiddenInput = select.querySelector('input[type="hidden"]');
-        const triggerText = trigger.querySelector('span:first-child');
-
-        trigger.addEventListener('click', (e) => {
-          e.stopPropagation();
-          document.querySelectorAll('.custom-select').forEach((s) => {
-            if (s !== select) s.classList.remove('open');
-          });
-          select.classList.toggle('open');
-        });
-
-        select.querySelectorAll('.custom-select-option').forEach((option) => {
-          option.addEventListener('click', () => {
-            triggerText.textContent = option.textContent;
-            hiddenInput.value = option.dataset.value;
-            select.classList.remove('open');
-            trigger.classList.add('has-value');
-          });
-        });
-      });
-
-      document.addEventListener('click', () => {
-        document.querySelectorAll('.custom-select').forEach((select) => {
-          select.classList.remove('open');
-        });
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/pixel-trail.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

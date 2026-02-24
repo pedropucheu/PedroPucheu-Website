@@ -3,369 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Photography Portfolio - Pedro Pucheu's still photography including portraits, food, and clothing/fashion work."
-    />
+    <meta name="description" content="Photography by Pedro Pucheu — portraits, events and moments." />
     <title>Stills | Pedro Pucheu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/ollie.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/stills.css" />
   </head>
-  <body>
+  <body class="page page--light">
     <!-- Navigation -->
-    <nav class="nav scrolled" id="mainNav">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="stills.html" class="nav-link">Stills</a></li>
-          <li><a href="motion.html" class="nav-link">Motion</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav class="nav nav--light" id="mainNav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navDrawer"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
         </button>
+        <ul class="nav__links" aria-label="Primary navigation">
+          <li><a href="work.html" class="nav__link">Work</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="stills.html" class="nav__link nav__link--active">Stills</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-      <div class="container">
-        <h1 class="page-title fade-in">PHOTOGRAPHY</h1>
-      </div>
-    </header>
-
-    <!-- Portraits Section -->
-    <section class="section" id="portraits" style="padding-top: 0">
-      <div class="container">
-        <h2 class="headline-section mb-xl fade-in">PORTRAITS</h2>
-        <div class="gallery-grid" id="galleryGrid">
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop"
-              alt="Portrait 1"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=600&fit=crop"
-              alt="Portrait 2"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=600&fit=crop"
-              alt="Portrait 3"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=600&fit=crop"
-              alt="Portrait 4"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=600&h=600&fit=crop"
-              alt="Portrait 5"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=600&fit=crop"
-              alt="Portrait 6"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=600&fit=crop"
-              alt="Portrait 7"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=600&fit=crop"
-              alt="Portrait 8"
-              loading="lazy"
-            />
-          </div>
+    <main class="stills-layout">
+      <!-- Fixed sidebar (desktop) / top header (mobile) -->
+      <aside class="stills-sidebar">
+        <div class="stills-sidebar__inner">
+          <h1 class="stills-sidebar__name">Pedro<br/>Pucheu</h1>
+          <p class="stills-sidebar__role">Filmmaker &amp; Photographer</p>
+          <p class="stills-sidebar__bio">
+            Capturing moments with a focus on character, light and honest storytelling.
+          </p>
+          <nav class="stills-sidebar__nav">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="stills.html" class="active">Stills</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="stills-sidebar__copy">&copy; 2026 Pedro Pucheu</p>
         </div>
-      </div>
-    </section>
+      </aside>
 
-    <!-- Food Section -->
-    <section class="section" id="food" style="border-top: 1px solid var(--color-border)">
-      <div class="container">
-        <h2 class="headline-section mb-xl fade-in">FOOD</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=600&fit=crop"
-              alt="Food 1"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop"
-              alt="Food 2"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=600&fit=crop"
-              alt="Food 3"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=600&fit=crop"
-              alt="Food 4"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&h=600&fit=crop"
-              alt="Food 5"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&h=600&fit=crop"
-              alt="Food 6"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&h=600&fit=crop"
-              alt="Food 7"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=600&fit=crop"
-              alt="Food 8"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Clothing/Fashion Section -->
-    <section class="section" id="clothing" style="border-top: 1px solid var(--color-border)">
-      <div class="container">
-        <h2 class="headline-section mb-xl fade-in">CLOTHING</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=600&fit=crop"
-              alt="Clothing 1"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=600&fit=crop"
-              alt="Clothing 2"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&h=600&fit=crop"
-              alt="Clothing 3"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=600&fit=crop"
-              alt="Clothing 4"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&h=600&fit=crop"
-              alt="Clothing 5"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1495385794356-15371f348c31?w=600&h=600&fit=crop"
-              alt="Clothing 6"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop"
-              alt="Clothing 7"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=600&fit=crop"
-              alt="Clothing 8"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Category Descriptions -->
-    <section class="section" style="border-top: 1px solid var(--color-border)">
-      <div class="container">
-        <div class="services-list">
-          <div class="service-item fade-in">
-            <h3 class="service-title">PORTRAITS</h3>
-            <p class="service-description">
-              Character-focused photography capturing individuals in various contexts and
-              expressions. From editorial to personal portraits.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Portrait Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">FOOD</h3>
-            <p class="service-description">
-              Professional culinary photography with careful attention to styling, composition, and
-              appetizing presentation.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Food Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">FASHION</h3>
-            <p class="service-description">
-              Fashion and apparel photography emphasizing fabric textures, fit, and visual appeal
-              with clean styling.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Fashion Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-
-          <div class="service-item fade-in">
-            <h3 class="service-title">EDITORIAL</h3>
-            <p class="service-description">
-              Storytelling through carefully crafted visual narratives for magazines, brands, and
-              creative campaigns.
-            </p>
-            <div class="service-footer">
-              <span class="service-type">Editorial Photography</span>
-              <span class="service-arrow">→</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <p class="cta-subtitle fade-in">Need photography?</p>
-          <h2 class="cta-title fade-in"><a href="contact.html">LET'S DISCUSS YOUR PROJECT</a></h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h4 class="footer-title">Sitemap</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="work.html">Work</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="stills.html">Stills</a></li>
-              <li><a href="motion.html">Motion</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Location</h4>
-            <ul class="footer-links">
-              <li><span>London, UK</span></li>
-              <li><span id="currentTime"></span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Socials</h4>
-            <ul class="footer-links">
-              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
-              <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Newsletter</h4>
-            <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address" required />
-              <button type="submit">→</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 Pedro Pucheu</p>
-          <p>London, UK</p>
-        </div>
-      </div>
-    </footer>
+      <!-- Masonry photo grid -->
+      <section class="stills-grid" aria-label="Photography gallery">
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1088481 copy.webp" alt="Portrait photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1076361 copy.webp" alt="Portrait photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/1730280765537.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1053798 copy.webp" alt="Portrait photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1076960 copy.webp" alt="Portrait photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1089291.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/1731405127396.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1077221 copy.webp" alt="Portrait photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1089714.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1088901.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1101040.webp" alt="Event photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1089868.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1089041.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1089903.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1101203.webp" alt="Event photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1090333.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1124188.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1100137.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1124733.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1112379.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1140278-Enhanced-NR.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1123710-Enhanced-NR.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/P1140335-Enhanced-NR_1.webp" alt="Photograph" loading="lazy" />
+        </figure>
+        <figure class="stills-grid__item" data-animate>
+          <img src="assets/photos/gallery/beers.webp" alt="Photograph" loading="lazy" />
+        </figure>
+      </section>
+    </main>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightboxClose">&times;</button>
-      <img src="" alt="" id="lightboxImage" />
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox__close" aria-label="Close">&times;</button>
+      <button class="lightbox__prev" aria-label="Previous">&larr;</button>
+      <button class="lightbox__next" aria-label="Next">&rarr;</button>
+      <div class="lightbox__image-wrapper">
+        <img class="lightbox__image" id="lightboxImage" src="" alt="" />
+      </div>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/gsap-animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/pixel-trail.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
   </body>
 </html>

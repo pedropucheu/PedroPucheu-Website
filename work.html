@@ -3,213 +3,258 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Work Portfolio - Pedro Pucheu's film and photography projects including documentaries, short films, and commercial content."
-    />
+    <meta name="description" content="Pedro Pucheu — Selected film and photography work." />
     <title>Work | Pedro Pucheu</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/ollie.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/work.css" />
   </head>
-  <body>
+  <body class="page">
     <!-- Navigation -->
-    <nav class="nav scrolled" id="mainNav">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">PEDRO PUCHEU</a>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="work.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="stills.html" class="nav-link">Stills</a></li>
-          <li><a href="motion.html" class="nav-link">Motion</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+    <nav class="nav" id="mainNav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navDrawer"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
         </button>
+        <ul class="nav__links" aria-label="Primary navigation">
+          <li><a href="work.html" class="nav__link">Work</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="stills.html" class="nav__link">Stills</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__drawer" id="navDrawer">
+        <nav aria-label="Mobile navigation">
+          <ul class="nav__drawer-links">
+            <li><a href="work.html" class="nav__link">Work</a></li>
+            <li><a href="about.html" class="nav__link">About</a></li>
+            <li><a href="stills.html" class="nav__link">Stills</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-      <div class="container">
-        <div class="page-header-row">
-          <h1 class="page-title fade-in">ALL WORK <span>(6)</span></h1>
-          <span class="view-toggle text-ui">Grid View</span>
+    <main>
+      <!-- Page header -->
+      <section class="work-header container">
+        <h1 class="work-header__title" data-animate>Work</h1>
+      </section>
+
+      <!-- Filter bar -->
+      <section class="container">
+        <div class="filter-bar" data-animate>
+          <button class="filter-pill filter-pill--active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="commercial">Commercial</button>
+          <button class="filter-pill" data-filter="narrative">Narrative &amp; Documentary</button>
+        </div>
+      </section>
+
+      <!-- Project grid -->
+      <section class="container">
+        <div class="project-grid" data-animate>
+          <article class="project-card" data-category="commercial" data-slug="moving-voice">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/moving-voice.webp" alt="Moving Voice" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Moving Voice</h3>
+                <p class="project-card__subtitle">Commercial · 2025</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="commercial" data-slug="delphine">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/delphine.webp" alt="Delphine" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Delphine</h3>
+                <p class="project-card__subtitle">Commercial · 2024</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="commercial" data-slug="homegrwn">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/homegrwn.webp" alt="HomeGrwn" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">HomeGrwn</h3>
+                <p class="project-card__subtitle">Commercial · 2023</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="commercial" data-slug="streetvox">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/streetvox.webp" alt="StreetVox" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">StreetVox</h3>
+                <p class="project-card__subtitle">Commercial · 2026</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="commercial" data-slug="wedding-eve-james">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/wedding-eve-james.webp" alt="Eve & James Wedding" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Eve &amp; James Wedding</h3>
+                <p class="project-card__subtitle">Commercial · 2025</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="commercial" data-slug="able-physiotherapy">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/able-physiotherapy.webp" alt="Able Physiotherapy" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Able Physiotherapy</h3>
+                <p class="project-card__subtitle">Commercial · 2025</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="narrative" data-slug="frankie">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/frankie.webp" alt="Frankie" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Frankie</h3>
+                <p class="project-card__subtitle">Narrative · 2024</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="narrative" data-slug="celebration-of-life">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/celebration-of-life.webp" alt="A Celebration of Life" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">A Celebration of Life</h3>
+                <p class="project-card__subtitle">Narrative · 2024</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="narrative" data-slug="responsibility">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/responsibility.webp" alt="Responsibility" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Responsibility</h3>
+                <p class="project-card__subtitle">Narrative · 2024</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="narrative" data-slug="yan-texeira">
+            <div class="project-card__thumb">
+              <img src="assets/thumbnails/yan-texeira.webp" alt="Yan Texeira" loading="lazy" />
+            </div>
+            <div class="project-card__overlay">
+              <div class="project-card__meta">
+                <h3 class="project-card__title">Yan Texeira</h3>
+                <p class="project-card__subtitle">Narrative · 2025</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal" aria-hidden="true">
+      <button class="modal-back" aria-label="Go back">← Back</button>
+      <button class="modal-close" aria-label="Close modal">✕</button>
+      <div class="modal-content">
+        <h2 class="modal-title"></h2>
+        <p class="modal-meta"></p>
+        <div class="modal-video">Video coming soon</div>
+        <p class="modal-desc"></p>
+        <div class="modal-gallery">
+          <div class="modal-gallery__placeholder"></div>
+          <div class="modal-gallery__placeholder"></div>
+          <div class="modal-gallery__placeholder"></div>
         </div>
       </div>
-    </header>
+    </div>
 
-    <!-- Projects Grid -->
-    <section class="section" style="padding-top: 0">
-      <div class="container">
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <a href="motion.html#yan-texeira" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&h=1000&fit=crop"
-              alt="Yan Texeira"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">YAN TEXEIRA</h3>
-              <p class="project-card-subtitle">Short Documentary</p>
-            </div>
-          </a>
-
-          <!-- Project 2 -->
-          <a href="motion.html#celebration" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=1000&fit=crop"
-              alt="A Celebration of Life"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">A CELEBRATION OF LIFE</h3>
-              <p class="project-card-subtitle">Short Film</p>
-            </div>
-          </a>
-
-          <!-- Project 3 -->
-          <a href="motion.html#unknown-reality" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=1000&fit=crop"
-              alt="An Unknown Reality"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">AN UNKNOWN REALITY</h3>
-              <p class="project-card-subtitle">Short Film</p>
-            </div>
-          </a>
-
-          <!-- Project 4 -->
-          <a href="motion.html#homegrown" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&h=1000&fit=crop"
-              alt="Homegrown"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">HOMEGROWN</h3>
-              <p class="project-card-subtitle">Branded Content</p>
-            </div>
-          </a>
-
-          <!-- Project 5 -->
-          <a href="motion.html#community" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=1000&fit=crop"
-              alt="Community"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">COMMUNITY</h3>
-              <p class="project-card-subtitle">Short Film</p>
-            </div>
-          </a>
-
-          <!-- Project 6 - Stills Preview -->
-          <a href="stills.html" class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1000&fit=crop"
-              alt="Photography"
-              class="project-card-image"
-              loading="lazy"
-            />
-            <div class="project-card-overlay"></div>
-            <div class="project-card-content">
-              <h3 class="project-card-title">PHOTOGRAPHY</h3>
-              <p class="project-card-subtitle">Portraits & Editorial</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <p class="cta-subtitle fade-in">Interested in working together?</p>
-          <h2 class="cta-title fade-in"><a href="contact.html">GET IN TOUCH</a></h2>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <h4 class="footer-title">Sitemap</h4>
+      <div class="container stack-lg">
+        <div class="footer-top">
+          <nav aria-label="Footer navigation">
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="work.html">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="stills.html">Stills</a></li>
-              <li><a href="motion.html">Motion</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Location</h4>
-            <ul class="footer-links">
-              <li><span>London, UK</span></li>
-              <li><span id="currentTime"></span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Socials</h4>
-            <ul class="footer-links">
-              <li><a href="https://instagram.com/plp_visuals" target="_blank">Instagram</a></li>
-              <li><a href="https://linkedin.com/in/pedropucheu" target="_blank">LinkedIn</a></li>
-              <li><a href="https://vimeo.com/pedropucheu" target="_blank">Vimeo</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Newsletter</h4>
-            <form class="footer-newsletter">
-              <input type="email" placeholder="E-mail Address" required />
-              <button type="submit">→</button>
-            </form>
-          </div>
+          </nav>
+          <ul class="footer-links footer-links--social">
+            <li>
+              <a href="https://instagram.com/plp_visuals" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li>
+              <a href="https://vimeo.com/pedropucheu" target="_blank" rel="noopener noreferrer">Vimeo</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/pedropucheu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
         </div>
-
         <div class="footer-bottom">
-          <p>&copy; 2026 Pedro Pucheu</p>
-          <p>London, UK</p>
+          <p>&copy; 2026 Pedro Pucheu. All rights reserved.</p>
+        </div>
+        <div class="footer-mark">
+          <span>PEDRO&nbsp;PUCHEU</span>
         </div>
       </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="js/gsap-animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/pixel-trail.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/filters.js" defer></script>
+    <script src="js/modal.js" defer></script>
   </body>
 </html>

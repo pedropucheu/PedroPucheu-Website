@@ -1,3 +1,216 @@
+/* Main initialisation for Pedro Pucheu portfolio */
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNav();
+  initLoader();
+  initIntroHighlight();
+  initScrollAnimations();
+});
+
+function initNav() {
+  const nav = document.getElementById('mainNav');
+  const toggle = document.getElementById('navToggle');
+  const drawer = document.getElementById('navDrawer');
+
+  if (!nav || !toggle || !drawer) return;
+
+  const links = drawer.querySelectorAll('a');
+
+  const closeDrawer = () => {
+    drawer.classList.remove('nav__drawer--open');
+    toggle.classList.remove('nav__toggle--open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
+  const openDrawer = () => {
+    drawer.classList.add('nav__drawer--open');
+    toggle.classList.add('nav__toggle--open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  };
+
+  toggle.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeDrawer();
+    }
+  });
+
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY || window.pageYOffset;
+    if (current > 40) {
+      nav.classList.add('nav--solid');
+    } else {
+      nav.classList.remove('nav--solid');
+    }
+
+    if (current > lastScroll && current > 120) {
+      nav.style.transform = 'translateY(-100%)';
+    } else {
+      nav.style.transform = '';
+    }
+    lastScroll = current;
+  });
+}
+
+function initLoader() {
+  const overlay = document.getElementById('loaderOverlay');
+  const wordsContainer = document.getElementById('loaderWords');
+
+  if (!overlay || !wordsContainer) return;
+
+  if (sessionStorage.getItem('loaderShown') === 'true') {
+    overlay.style.display = 'none';
+    return;
+  }
+
+  if (typeof gsap === 'undefined') {
+    overlay.style.display = 'none';
+    return;
+  }
+
+  const words = ['VIDEO', 'FILM', 'DOCUMENTARY', 'COMMERCIALS', 'STORYTELLING', 'PEDRO PUCHEU'];
+
+  wordsContainer.innerHTML = '';
+  const wordSpans = words.map((word) => {
+    const span = document.createElement('span');
+    span.textContent = word;
+    span.style.display = 'block';
+    span.style.fontFamily = "var(--font-display)";
+    span.style.fontSize = 'clamp(3rem, 8vw, 6rem)';
+    span.style.letterSpacing = 'var(--tracking-tight)';
+    span.style.textTransform = 'uppercase';
+    wordsContainer.appendChild(span);
+    return span;
+  });
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+      sessionStorage.setItem('loaderShown', 'true');
+      gsap.to(overlay, {
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power3.out',
+        onComplete: () => {
+          overlay.style.display = 'none';
+        },
+      });
+    },
+  });
+
+  wordSpans.forEach((span, index) => {
+    const baseDuration = 0.8;
+    const isLast = index === wordSpans.length - 1;
+    tl.fromTo(
+      span,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: baseDuration,
+        ease: 'power3.out',
+      }
+    );
+    tl.to(span, {
+      opacity: isLast ? 1 : 0,
+      y: isLast ? 0 : -20,
+      scale: isLast ? 1.05 : 1,
+      duration: isLast ? 1.5 : 0.6,
+      ease: isLast ? 'power3.out' : 'power3.in',
+    });
+  });
+}
+
+function initIntroHighlight() {
+  const intro = document.getElementById('introText');
+  const aboutCta = document.getElementById('aboutCta');
+
+  if (!intro || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    return;
+  }
+
+  const text = intro.textContent || '';
+  const words = text.split(' ').filter(Boolean);
+  intro.textContent = '';
+
+  const spans = words.map((word, index) => {
+    const span = document.createElement('span');
+    span.textContent = word + (index < words.length - 1 ? ' ' : '');
+    span.style.color = 'var(--text-muted)';
+    intro.appendChild(span);
+    return span;
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: intro,
+      start: 'top 80%',
+      end: 'bottom 20%',
+      scrub: 1,
+    },
+  });
+
+  tl.to(spans, {
+    color: 'var(--text-primary)',
+    stagger: {
+      each: 0.05,
+    },
+  });
+
+  if (aboutCta) {
+    gsap.set(aboutCta, { opacity: 0, y: 16 });
+    tl.to(
+      aboutCta,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: 'power3.out',
+      },
+      '-=0.2'
+    );
+  }
+}
+
+function initScrollAnimations() {
+  const animated = document.querySelectorAll('[data-animate]');
+  if (!animated.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  animated.forEach((el) => observer.observe(el));
+}
+
 /* ============================================
    PEDRO PUCHEU PORTFOLIO - MAIN JS
    Ollie Studio Design - GSAP Integration
@@ -202,6 +415,42 @@ function initShowreel() {
 
   observer.observe(container);
 }
+
+/* === SHOWREEL MODAL === */
+(function () {
+  const playBtn = document.getElementById('playReelButton');
+  if (!playBtn) return;
+
+  // Create modal overlay
+  const modal = document.createElement('div');
+  modal.id = 'showreelModal';
+  modal.style.cssText = 'display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;cursor:pointer;';
+  modal.innerHTML = '<div style="position:relative;width:90%;max-width:960px;" onclick="event.stopPropagation()"><video id="showreelModalVideo" src="assets/video/showreel.mp4" controls playsinline style="width:100%;border-radius:4px;"></video><button style="position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer" aria-label="Close">✕</button></div>';
+  document.body.appendChild(modal);
+
+  const video = modal.querySelector('video');
+  const closeBtn = modal.querySelector('button');
+
+  function openModal() {
+    modal.style.display = 'flex';
+    video.currentTime = 0;
+    video.play();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    video.pause();
+    document.body.style.overflow = '';
+  }
+
+  playBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
 
 /* === SMOOTH SCROLL FOR ANCHOR LINKS === */
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

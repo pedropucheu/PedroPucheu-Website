@@ -1,0 +1,36 @@
+@import url('./variables.css');
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--duration-normal) var(--ease-out-expo),
+    transform var(--duration-normal) var(--ease-out-expo);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animate][data-animate-delay='sm'] {
+  transition-delay: 0.1s;
+}
+
+[data-animate][data-animate-delay='md'] {
+  transition-delay: 0.2s;
+}
+
+[data-animate][data-animate-delay='lg'] {
+  transition-delay: 0.3s;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

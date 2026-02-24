@@ -18,3 +18,8 @@ build/
 # Environment
 .env
 .env.local
+# Large video files - host externally
+assets/video/showreel.mp4
+CURSOR-PROMPT.md
+docs/
+Pedro/
