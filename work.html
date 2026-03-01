@@ -273,6 +273,11 @@
           if (item.dataset.category !== 'commercial') item.style.display = 'none';
         });
 
+        // Per-slug object-position overrides
+        var objectPositions = {
+          'moving-voice': '20% center'
+        };
+
         // Hover: swap preview image
         items.forEach(function (item) {
           item.addEventListener('mouseenter', function () {
@@ -281,6 +286,7 @@
               previewImg.style.opacity = '0';
               setTimeout(function () {
                 previewImg.src = thumb;
+                previewImg.style.objectPosition = objectPositions[item.dataset.slug] || 'center center';
                 previewImg.style.opacity = '1';
               }, 150);
             }
