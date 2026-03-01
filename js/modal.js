@@ -57,7 +57,9 @@
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111423.png',
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111447.png',
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111507.png',
-        'assets/photos/projects/frankie/Screenshot 2026-02-25 111524.png'
+        'assets/photos/projects/frankie/Screenshot 2026-02-25 111524.png',
+        'assets/photos/projects/frankie/Screenshot 2026-02-25 111556.png',
+        'assets/photos/projects/frankie/Screenshot 2026-02-25 111755.png'
       ]
     },
     'celebration-of-life': {
@@ -68,7 +70,9 @@
         'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 144456.jpg',
         'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 144634.jpg',
         'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 144717.jpg',
-        'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 150337.jpg'
+        'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 150337.jpg',
+        'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 150420.jpg',
+        'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 150448.jpg'
       ]
     },
     'responsibility': {
@@ -79,7 +83,9 @@
         'assets/photos/projects/responsibility/Screenshot 2026-02-25 110044.png',
         'assets/photos/projects/responsibility/Screenshot 2026-02-25 110119.png',
         'assets/photos/projects/responsibility/Screenshot 2026-02-25 110149.png',
-        'assets/photos/projects/responsibility/Screenshot 2026-02-25 110253.png'
+        'assets/photos/projects/responsibility/Screenshot 2026-02-25 110253.png',
+        'assets/photos/projects/responsibility/Screenshot 2026-02-25 110356.png',
+        'assets/photos/projects/responsibility/Screenshot 2026-02-25 110428.png'
       ]
     },
     'yan-texeira': {
@@ -90,7 +96,9 @@
         'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112506.png',
         'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112538.png',
         'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112649.png',
-        'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112711.png'
+        'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112711.png',
+        'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112757.png',
+        'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112821.png'
       ]
     },
     'the-projectionist': {
@@ -101,7 +109,9 @@
         'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 111954.png',
         'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112012.png',
         'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112053.png',
-        'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112119.png'
+        'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112119.png',
+        'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112143.png',
+        'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 112217.png'
       ]
     },
     'an-unknown-reality': {
@@ -118,7 +128,9 @@
         'assets/photos/projects/day-one/Screenshot 2026-02-25 110613.png',
         'assets/photos/projects/day-one/Screenshot 2026-02-25 110657.png',
         'assets/photos/projects/day-one/Screenshot 2026-02-25 110900.png',
-        'assets/photos/projects/day-one/Screenshot 2026-02-25 110922.png'
+        'assets/photos/projects/day-one/Screenshot 2026-02-25 110922.png',
+        'assets/photos/projects/day-one/Screenshot 2026-02-25 110943.png',
+        'assets/photos/projects/day-one/Screenshot 2026-02-25 111149.png'
       ]
     }
   };
@@ -168,7 +180,6 @@
     const videoArea = overlay.querySelector('.modal-video');
     if (videoArea) {
       if (data.youtubeIds && data.youtubeIds.length > 0) {
-        // Multiple YouTube videos (e.g. Battle Ready) — stack them
         videoArea.innerHTML = data.youtubeIds.map(function(id, i) {
           var style = i > 0
             ? 'width:100%;aspect-ratio:16/9;margin-top:1rem;'
@@ -191,10 +202,10 @@
     window.location.hash = slug;
   }
 
-  function closeModal() {
-    // Stop YouTube playback on close by resetting iframe src
-    overlay.querySelectorAll('iframe').forEach(function(f) { f.src = f.src; });
+  window.openProjectModal = openModal;
 
+  function closeModal() {
+    overlay.querySelectorAll('iframe').forEach(function(f) { f.src = f.src; });
     overlay.classList.remove('modal-overlay--open');
     document.body.style.overflow = '';
     history.replaceState(null, '', window.location.pathname + window.location.search);
@@ -205,7 +216,7 @@
     }, 500);
   }
 
-  document.querySelectorAll('.video-card, .project-card').forEach(function (card) {
+  document.querySelectorAll('.video-card, .project-card, .work-list__item').forEach(function (card) {
     card.addEventListener('click', function () {
       openModal(card.dataset.slug);
     });
