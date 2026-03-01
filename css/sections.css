@@ -324,25 +324,35 @@
   user-select: none;
 }
 
-/* ===== CTA SECTION — ensure text is visible on light pages ===== */
-.page--light .section-cta-dark {
-  background: var(--bg-primary);
-}
-
-.section-cta-dark .section-title {
-  color: var(--text-highlight);
-}
-
-/* Light page footer */
-.page--light .footer {
-  background: var(--bg-primary);
-}
-
-.section-cta-dark * {
-  color: inherit;
+/* ===== CTA SECTION — always dark regardless of page theme ===== */
+.section-cta-dark {
+  background: #0a0a0a !important;
+  color: #f0f0f0;
 }
 
 .section-cta-dark .section-title,
 .section-cta-dark h2 {
   color: #ffffff !important;
+}
+
+.section-cta-dark p,
+.section-cta-dark a:not(.btn) {
+  color: #f0f0f0;
+}
+
+/* Light page footer — always dark */
+.page--light .footer {
+  background: var(--bg-primary);
+}
+
+.page--light .footer .footer-links a {
+  color: var(--text-secondary);
+}
+
+.page--light .footer .footer-bottom p {
+  color: var(--text-muted);
+}
+
+.page--light .footer .footer-mark span {
+  color: rgba(255,255,255,0.04);
 }
