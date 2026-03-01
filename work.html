@@ -19,11 +19,12 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/sections.css" />
     <link rel="stylesheet" href="css/work.css" />
   </head>
-  <body class="page">
+  <body class="page page--light">
     <!-- Navigation -->
-    <nav class="nav" id="mainNav">
+    <nav class="nav nav--light" id="mainNav">
       <div class="nav__inner">
         <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
         <button
@@ -56,19 +57,28 @@
       </div>
     </nav>
 
-    <main>
-      <!-- Page header + filters (tight together) -->
-      <section class="work-header container">
-        <h1 class="work-header__title" data-animate>Work</h1>
-        <div class="filter-bar" data-animate>
-          <button class="filter-pill filter-pill--active" data-filter="all">All</button>
-          <button class="filter-pill" data-filter="commercial">Commercial</button>
-          <button class="filter-pill" data-filter="narrative">Narrative &amp; Documentary</button>
+    <main class="work-layout">
+      <aside class="work-sidebar">
+        <div class="work-sidebar__inner">
+          <h1 class="work-sidebar__name">Pedro<br/>Pucheu</h1>
+          <p class="work-sidebar__role">Filmmaker &amp; Photographer</p>
+          <p class="work-sidebar__bio">Film, documentary and commercial work — crafted with a cinematic eye.</p>
+          <nav class="work-sidebar__nav">
+            <a href="index.html">Home</a>
+            <a href="work.html" class="active">Work</a>
+            <a href="about.html">About</a>
+            <a href="stills.html">Stills</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="work-sidebar__filters">
+            <button class="filter-pill filter-pill--active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="commercial">Commercial</button>
+            <button class="filter-pill" data-filter="narrative">Narrative &amp; Doc</button>
+          </div>
+          <p class="work-sidebar__copy">&copy; 2026 Pedro Pucheu</p>
         </div>
-      </section>
-
-      <!-- Project grid -->
-      <section class="container">
+      </aside>
+      <section class="work-grid-area">
         <div class="project-grid" data-animate>
           <article class="project-card" data-category="commercial" data-slug="moving-voice">
             <div class="project-card__thumb">

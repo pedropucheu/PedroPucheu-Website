@@ -1,6 +1,5 @@
 (() => {
-  if (!matchMedia('(hover: hover)').matches) return;
-  if (document.body.classList.contains('page--light')) return;
+  return; // disabled
 
   const canvas = document.createElement('canvas');
   canvas.id = 'pixelTrail';

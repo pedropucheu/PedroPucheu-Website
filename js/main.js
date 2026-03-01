@@ -363,3 +363,22 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
   window.addEventListener('resize', update);
 })();
+
+/* === BTS CAROUSEL HOME (index CTA section) === */
+(function() {
+  var track = document.getElementById('btsTrackHome');
+  if (!track) return;
+  var wrapper = track.closest('.bts-carousel-wrapper');
+  var prev = wrapper.querySelector('.bts-arrow--prev');
+  var next = wrapper.querySelector('.bts-arrow--next');
+  var items = track.querySelectorAll('.bts-carousel__item');
+  var index = 0;
+  function visible() { return window.innerWidth >= 768 ? 3 : 1; }
+  function update() {
+    var w = track.parentElement.offsetWidth / visible();
+    track.style.transform = 'translateX(-' + (index * (w + 16)) + 'px)';
+  }
+  prev.addEventListener('click', function() { index = Math.max(0, index-1); update(); });
+  next.addEventListener('click', function() { index = Math.min(items.length - visible(), index+1); update(); });
+  window.addEventListener('resize', update);
+})();

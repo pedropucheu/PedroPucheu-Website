@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@300;400&family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -123,84 +123,45 @@
             <p class="badge">Services</p>
             <h2 class="section-title" id="servicesHeading">What I do</h2>
           </header>
-          <div class="services-list" data-animate>
-
-            <!-- Video Production -->
-            <div class="services-list__item">
-              <div class="services-list__header">
-                <span class="services-list__num">01</span>
-                <div class="services-list__body">
-                  <h3 class="services-list__title">Video Production</h3>
-                  <p class="services-list__desc">
-                    End-to-end production for brands and creative projects — from concept and scripting through filming, editing and colour grading. Delivered with a cinematic sensibility.
-                  </p>
-                  <div class="services-list__tags">
-                    <span class="badge">Commercials</span>
-                    <span class="badge">Brand Films</span>
-                    <span class="badge">Wedding Films</span>
-                    <span class="badge">Corporate</span>
-                  </div>
-                </div>
+          <div class="services-horiz" data-animate>
+            <div class="services-horiz__item">
+              <div class="services-horiz__thumb">
+                <img src="assets/thumbnails/moving-voice.webp" alt="Video Production" loading="lazy" />
               </div>
-              <div class="services-list__thumb">
-                <img src="assets/thumbnails/moving-voice.webp" alt="Video production work" loading="lazy" />
+              <h3 class="services-horiz__title">Video Production</h3>
+              <p class="services-horiz__desc">End-to-end production from concept through delivery. Commercials, brand films, wedding cinematography — with a cinematic sensibility.</p>
+              <div class="services-horiz__tags">
+                <span class="badge">Commercials</span><span class="badge">Brand Films</span><span class="badge">Wedding Films</span><span class="badge">Corporate</span>
               </div>
             </div>
-
-            <!-- Photography -->
-            <div class="services-list__item">
-              <div class="services-list__header">
-                <span class="services-list__num">02</span>
-                <div class="services-list__body">
-                  <h3 class="services-list__title">Photography</h3>
-                  <p class="services-list__desc">
-                    Portrait, editorial and event photography with a focus on natural light, character and mood. Available for campaigns, personal branding and live events.
-                  </p>
-                  <div class="services-list__tags">
-                    <span class="badge">Portraits</span>
-                    <span class="badge">Editorial</span>
-                    <span class="badge">Events</span>
-                    <span class="badge">Campaigns</span>
-                  </div>
-                </div>
+            <div class="services-horiz__item">
+              <div class="services-horiz__thumb">
+                <img src="assets/thumbnails/photography.webp" alt="Photography" loading="lazy" />
               </div>
-              <div class="services-list__thumb">
-                <img src="assets/thumbnails/photography.webp" alt="Photography work" loading="lazy" />
+              <h3 class="services-horiz__title">Photography</h3>
+              <p class="services-horiz__desc">Portrait, editorial and event photography with a focus on natural light, character and mood.</p>
+              <div class="services-horiz__tags">
+                <span class="badge">Portraits</span><span class="badge">Editorial</span><span class="badge">Events</span><span class="badge">Campaigns</span>
               </div>
             </div>
-
-            <!-- Narrative & Documentary -->
-            <div class="services-list__item">
-              <div class="services-list__header">
-                <span class="services-list__num">03</span>
-                <div class="services-list__body">
-                  <h3 class="services-list__title">Narrative &amp; Documentary</h3>
-                  <p class="services-list__desc">
-                    Short films and documentaries exploring real stories and real people. Character-driven work with attention to craft, pacing and emotional resonance.
-                  </p>
-                  <div class="services-list__tags">
-                    <span class="badge">Short Films</span>
-                    <span class="badge">Documentaries</span>
-                    <span class="badge">Character Studies</span>
-                    <span class="badge">Story Development</span>
-                  </div>
-                </div>
+            <div class="services-horiz__item">
+              <div class="services-horiz__thumb">
+                <img src="assets/thumbnails/yan-texeira.webp" alt="Narrative & Documentary" loading="lazy" />
               </div>
-              <div class="services-list__thumb">
-                <img src="assets/thumbnails/yan-texeira.webp" alt="Narrative & documentary work" loading="lazy" />
+              <h3 class="services-horiz__title">Narrative &amp; Documentary</h3>
+              <p class="services-horiz__desc">Short films and documentaries exploring real stories and real people. Character-driven, emotionally resonant work.</p>
+              <div class="services-horiz__tags">
+                <span class="badge">Short Films</span><span class="badge">Documentaries</span><span class="badge">Character Studies</span>
               </div>
             </div>
-
           </div>
-        </div>
-      </section>
 
       <!-- Featured work -->
       <section class="section-featured section--xl" aria-labelledby="featuredHeading">
         <div class="container">
           <header class="stack-md" data-animate>
             <p class="badge">Selected work</p>
-            <h2 class="section-title" id="featuredHeading">Stories in motion</h2>
+            <h2 class="section-title section-title--cormorant" id="featuredHeading">Selected Works</h2>
           </header>
           <div class="featured-grid" data-animate>
             <a href="work.html?project=moving-voice" class="featured-card card card--hover">
@@ -271,16 +232,36 @@
         <div class="container stack-lg">
           <header class="stack-md" data-animate>
             <h2 class="section-title" id="ctaHeading">
-              Let&apos;s create
-              <br />
-              something.
+              Let&apos;s create something special.
             </h2>
             <p class="cta-email">
-              <a href="mailto:hello@pedropucheu.com">hello@pedropucheu.com</a>
+              <a href="mailto:pedropucheu@gmail.com">pedropucheu@gmail.com</a>
             </p>
           </header>
           <div data-animate>
             <a href="contact.html" class="btn btn--primary">Get in touch</a>
+          </div>
+          <!-- BTS Carousel merged into CTA -->
+          <div class="bts-carousel-wrapper" data-animate>
+            <button class="bts-arrow bts-arrow--prev bts-arrow--dark" aria-label="Previous">&#8592;</button>
+            <div class="bts-carousel">
+              <div class="bts-carousel__track" id="btsTrackHome">
+                <div class="bts-carousel__item"><img src="assets/images/bts/DSC03689_HR.jpg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_0087.JPG" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_1965.JPG" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_3203.JPG" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6303.jpeg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6383.jpeg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6769.jpeg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8081.jpeg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8677.jpeg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8862.JPG" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_9795.JPG" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/5a328c61-5315-49bf-8563-f0964f9e3715.jpg" alt="BTS" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/6c18c492-1138-4177-8b19-5e3a52af321f.jpg" alt="BTS" loading="lazy" /></div>
+              </div>
+            </div>
+            <button class="bts-arrow bts-arrow--next bts-arrow--dark" aria-label="Next">&#8594;</button>
           </div>
         </div>
       </section>

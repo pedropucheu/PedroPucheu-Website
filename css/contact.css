@@ -128,3 +128,7 @@
 .btn--full {
   width: 100%;
 }
+
+.contact-section--bg { position: relative; background-image: url('../assets/images/contact-bg.jpg'); background-size: cover; background-position: center; }
+.contact-section--bg::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.82); z-index: 0; }
+.contact-section--bg .container { position: relative; z-index: 1; }
