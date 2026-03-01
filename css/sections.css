@@ -474,3 +474,21 @@ a.services-horiz__item {
 }
 a.services-horiz__item:hover { opacity: 0.85; }
 a.services-horiz__item .services-horiz__title { color: var(--text-dark); }
+
+/* ── Thumbnail consistency ── */
+.featured-card__thumb img,
+.services-horiz__thumb img,
+.video-card__thumb img,
+.work-list__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.featured-card__thumb,
+.services-horiz__thumb {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
