@@ -73,8 +73,7 @@
             <a href="contact.html">Contact</a>
           </nav>
           <div class="work-filters" id="workFilters" style="margin-top:var(--space-md);display:flex;flex-direction:column;gap:0.4rem;">
-            <button class="filter-pill filter-pill--active" data-filter="all">All</button>
-            <button class="filter-pill" data-filter="commercial">Commercial</button>
+            <button class="filter-pill filter-pill--active" data-filter="commercial">Commercial</button>
             <button class="filter-pill" data-filter="narrative">Narrative &amp; Doc</button>
           </div>
           <p class="stills-sidebar__copy">&copy; 2026 Pedro Pucheu</p>
@@ -269,6 +268,10 @@
         var previewImg = document.getElementById('workPreviewImg');
         var items = document.querySelectorAll('.work-list__item');
         var pills = document.querySelectorAll('#workFilters .filter-pill');
+        // Default: show commercial only
+        items.forEach(function(item) {
+          if (item.dataset.category !== 'commercial') item.style.display = 'none';
+        });
 
         // Hover: swap preview image
         items.forEach(function (item) {
@@ -291,7 +294,7 @@
             pill.classList.add('filter-pill--active');
             var filter = pill.dataset.filter;
             items.forEach(function (item) {
-              var show = filter === 'all' || item.dataset.category === filter;
+              var show = item.dataset.category === filter;
               item.style.display = show ? '' : 'none';
             });
           });
