@@ -55,7 +55,7 @@
     },
     'anderson-silva': {
       title: 'Anderson Silva Event', category: 'commercial', year: '2025',
-      youtubeId: 'shjaxV1RSI8',
+      youtubeId: 'sxd5Jb22beM',
       desc: 'Event coverage for an Anderson Silva appearance — capturing the energy, atmosphere and iconic moments of the evening.',
       gallery: []
     },
