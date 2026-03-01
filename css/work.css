@@ -317,9 +317,9 @@
 /* ===== VIDEOS GRID (mirrors stills layout exactly) ===== */
 .videos-grid {
   margin-left: var(--sidebar-width);
-  flex: 1;
   padding: var(--space-md);
   padding-top: calc(var(--nav-height) + var(--space-md));
+  min-height: 100vh;
 }
 
 .videos-grid__inner {
@@ -467,9 +467,9 @@
 /* ===== VIDEOS GRID — mirrors stills layout exactly ===== */
 .videos-grid {
   margin-left: var(--sidebar-width);
-  flex: 1;
   padding: var(--space-md);
   padding-top: calc(var(--nav-height) + var(--space-md));
+  min-height: 100vh;
 }
 
 .videos-grid__inner {
