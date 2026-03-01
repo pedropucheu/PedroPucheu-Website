@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/about.css" />
   </head>
-  <body class="page">
+  <body class="page page--light">
     <!-- Navigation -->
-    <nav class="nav" id="mainNav">
+    <nav class="nav nav--light" id="mainNav">
       <div class="nav__inner">
         <a href="index.html" class="nav__brand">PEDRO PUCHEU</a>
         <button
@@ -79,7 +79,7 @@
       </section>
 
       <!-- Services detail -->
-      <section class="about-services section--xl">
+      <section class="about-services about-services--light section--xl" style="background:var(--bg-light)">
         <div class="container">
           <h2 class="section-title" data-animate>What I offer</h2>
           <div class="about-services__grid" data-animate>
@@ -95,6 +95,34 @@
               <h3>Narrative &amp; Documentary</h3>
               <p>Short films and documentaries that explore real stories and real people. Character-driven work with attention to craft, pacing and emotional resonance — from intimate portraits to observational pieces.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BTS Photo Carousel -->
+      <section class="about-bts section--xl">
+        <div class="container">
+          <h2 class="about-bts__title" data-animate>Behind the Scenes</h2>
+          <div class="bts-carousel-wrapper" data-animate>
+            <button class="bts-arrow bts-arrow--prev" aria-label="Previous">&#8592;</button>
+            <div class="bts-carousel" id="btsCarousel">
+              <div class="bts-carousel__track" id="btsTrack">
+                <div class="bts-carousel__item"><img src="assets/images/bts/DSC03689_HR.jpg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_0087.JPG" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_1965.JPG" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_3203.JPG" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6303.jpeg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6383.jpeg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_6769.jpeg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8081.jpeg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8677.jpeg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_8862.JPG" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/IMG_9795.JPG" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/5a328c61-5315-49bf-8563-f0964f9e3715.jpg" alt="Pedro behind the scenes" loading="lazy" /></div>
+                <div class="bts-carousel__item"><img src="assets/images/bts/6c18c492-1138-4177-8b19-5e3a52af321f.jpg" alt="Pedro behind the scenes" loading="lazy" /></div>
+              </div>
+            </div>
+            <button class="bts-arrow bts-arrow--next" aria-label="Next">&#8594;</button>
           </div>
         </div>
       </section>

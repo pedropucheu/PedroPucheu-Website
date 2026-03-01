@@ -326,3 +326,40 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     el.style.transform = 'none';
   });
 }
+
+/* === BTS CAROUSEL (about page) === */
+(function initBtsCarousel() {
+  const track = document.getElementById('btsTrack');
+  const prevBtn = document.querySelector('.bts-arrow--prev');
+  const nextBtn = document.querySelector('.bts-arrow--next');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  let index = 0;
+  const items = track.querySelectorAll('.bts-carousel__item');
+  const total = items.length;
+
+  function getVisible() {
+    return window.innerWidth >= 768 ? 3 : 1;
+  }
+
+  function update() {
+    const visible = getVisible();
+    const itemW = track.parentElement.offsetWidth / visible;
+    const gap = 16; // 1rem
+    const offset = index * (itemW + gap);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  }
+
+  prevBtn.addEventListener('click', function() {
+    index = Math.max(0, index - 1);
+    update();
+  });
+
+  nextBtn.addEventListener('click', function() {
+    const visible = getVisible();
+    index = Math.min(total - visible, index + 1);
+    update();
+  });
+
+  window.addEventListener('resize', update);
+})();

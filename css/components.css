@@ -41,7 +41,8 @@
   font-size: var(--text-small);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
   position: relative;
 }
 
@@ -80,6 +81,15 @@
 .nav--light .nav__link::after {
   background-color: var(--text-dark);
 }
+.nav--light.nav--solid {
+  background-color: rgba(248, 247, 244, 0.96);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nav--light .nav__brand {
+  color: var(--text-dark);
+}
+
 
 .nav__toggle {
   display: inline-flex;

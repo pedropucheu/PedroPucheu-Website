@@ -1,8 +1,13 @@
 /* Work page styles */
 
 .work-header {
-  padding-top: calc(var(--nav-height) + var(--space-xl));
-  padding-bottom: var(--space-md);
+  padding-top: calc(var(--nav-height) + var(--space-lg));
+  padding-bottom: var(--space-sm);
+}
+
+.work-header .filter-bar {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
 .work-header__title {
@@ -17,7 +22,7 @@
 .filter-bar {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   flex-wrap: wrap;
 }
 
@@ -234,14 +239,45 @@
   margin-bottom: var(--space-lg);
 }
 
-.modal-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+
+
+/* Placeholder cards (no thumbnail yet) */
+.project-card__thumb--placeholder {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal-gallery__placeholder {
-  aspect-ratio: 4 / 3;
-  background: var(--bg-card);
+.project-card__placeholder-title {
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  color: rgba(255,255,255,0.2);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  text-align: center;
+  padding: var(--space-sm);
+}
+
+/* Modal gallery - 2 column, large */
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: var(--space-md);
+}
+
+.modal-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: var(--border-radius);
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .modal-gallery {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,5 +1,6 @@
 (() => {
   if (!matchMedia('(hover: hover)').matches) return;
+  if (document.body.classList.contains('page--light')) return;
 
   const cursor = document.createElement('div');
   cursor.className = 'custom-cursor';

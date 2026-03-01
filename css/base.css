@@ -119,3 +119,16 @@ section {
   }
 }
 
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-section-title);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.stack-md .section-title + * {
+  margin-top: var(--space-md);
+}
