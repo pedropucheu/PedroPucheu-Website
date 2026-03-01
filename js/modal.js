@@ -67,6 +67,7 @@
     },
     'frankie': {
       title: 'Frankie', category: 'narrative', year: '2024',
+      youtubeId: 'shjaxV1RSI8',
       desc: 'A narrative short film following Frankie through a day of quiet revelations. A character-driven piece exploring identity, routine and the moments in between.',
       gallery: [
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111423.png',
