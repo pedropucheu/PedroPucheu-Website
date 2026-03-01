@@ -200,9 +200,9 @@
       if (data.youtubeIds && data.youtubeIds.length > 0) {
         videoArea.style.aspectRatio = 'unset';
         videoArea.style.height = 'auto';
-        videoArea.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">'
+        videoArea.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">'
           + data.youtubeIds.map(function(id) {
-            return '<div style="aspect-ratio:16/9;overflow:hidden;border-radius:var(--border-radius);">' + makeYouTubeEmbed(id) + '</div>';
+            return '<div style="aspect-ratio:9/16;overflow:hidden;border-radius:var(--border-radius);">' + makeYouTubeEmbed(id) + '</div>';
           }).join('')
           + '</div>';
       } else if (data.youtubeId) {
