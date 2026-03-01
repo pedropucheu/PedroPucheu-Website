@@ -3,41 +3,49 @@
   const PROJECT_DATA = {
     'moving-voice': {
       title: 'Moving Voice', category: 'commercial', year: '2025',
+      youtubeId: 'kuCdgSZbR2I',
       desc: 'A community-driven brand film for Moving Voice, a spoken word and movement collective based in London. Directed and produced end to end — capturing the raw energy of live performance and the voices behind the movement.',
       gallery: []
     },
     'delphine': {
       title: 'Delphine', category: 'commercial', year: '2024',
+      youtubeId: 'sqasXQJZSVY',
       desc: 'A fashion and beauty campaign exploring themes of transformation and identity. Two pieces — "Conversion" and "Love" — shot with a cinematic, editorial sensibility.',
       gallery: []
     },
     'homegrwn': {
       title: 'HomeGrwn', category: 'commercial', year: '2023',
+      youtubeId: 'cdlAYFTTyKQ',
       desc: 'Commercial content for HomeGrwn, a London-based food brand celebrating homegrown culture. Shot on location with a focus on warmth, community and authentic taste.',
       gallery: []
     },
     'streetvox': {
       title: 'StreetVox', category: 'commercial', year: '2026',
+      youtubeId: 'Ei8hSLPJ_5Q',
       desc: "An editorial short for StreetVox — capturing the pulse of London's street culture through candid interviews and observational filmmaking.",
       gallery: []
     },
     'wedding-eve-james': {
       title: 'Eve & James Wedding', category: 'commercial', year: '2025',
+      youtubeId: '4TPe8yL7JUI',
       desc: 'A cinematic wedding film for Eve and James. Shot across a full day — from the quiet morning preparations to the last dance — with an emphasis on emotion and atmosphere.',
       gallery: []
     },
     'able-physiotherapy': {
       title: 'Able Physiotherapy', category: 'commercial', year: '2025',
+      youtubeId: 'g2XA6NHZZwA',
       desc: 'A 4K brand tour for Able Physiotherapy. Designed to showcase their space, team and approach to patient care through clean, professional visuals.',
       gallery: []
     },
     'anderson-silva': {
       title: 'Anderson Silva Event', category: 'commercial', year: '2025',
+      youtubeId: 'shjaxV1RSI8',
       desc: 'Event coverage for an Anderson Silva appearance — capturing the energy, atmosphere and iconic moments of the evening.',
       gallery: []
     },
     'battle-ready': {
       title: 'Battle Ready', category: 'commercial', year: '2025',
+      youtubeIds: ['3fa8NuwgC8E', 'Vcj28Stg5L8'],
       desc: 'A high-intensity brand film for Battle Ready — built around performance, preparation and the relentless pursuit of excellence.',
       gallery: []
     },
@@ -54,7 +62,7 @@
     },
     'celebration-of-life': {
       title: 'A Celebration of Life', category: 'narrative', year: '2024',
-      videoSrc: 'assets/video/celebration-of-life.mp4',
+      youtubeId: 'wOrSbMTKvi0',
       desc: "A short documentary celebrating life's defining moments — told through a tapestry of intimate interviews and observational footage.",
       gallery: [
         'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 144456.jpg',
@@ -65,7 +73,7 @@
     },
     'responsibility': {
       title: 'Responsibility', category: 'narrative', year: '2024',
-      videoSrc: 'assets/video/responsibility.mp4',
+      youtubeId: '_QAXaZEZwaY',
       desc: 'A narrative short film examining the weight of personal responsibility. Dark, atmospheric and character-driven.',
       gallery: [
         'assets/photos/projects/responsibility/Screenshot 2026-02-25 110044.png',
@@ -76,7 +84,7 @@
     },
     'yan-texeira': {
       title: 'Yan Texeira', category: 'narrative', year: '2025',
-      videoSrc: 'assets/video/yan-texeira.mp4',
+      youtubeId: 'nxfeydnnOXI',
       desc: 'A documentary portrait of Yan Texeira — tracing his journey, craft and vision. An intimate look at an artist at work.',
       gallery: [
         'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112506.png',
@@ -87,7 +95,7 @@
     },
     'the-projectionist': {
       title: 'The Projectionist', category: 'narrative', year: '2023',
-      videoSrc: 'assets/video/the-projectionist.mp4',
+      youtubeId: 'jJJ7_iLRb6k',
       desc: 'A short film exploring the quiet obsession of a projectionist — where the boundary between story and storyteller begins to blur.',
       gallery: [
         'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 111954.png',
@@ -98,13 +106,13 @@
     },
     'an-unknown-reality': {
       title: 'An Unknown Reality', category: 'narrative', year: '2023',
-      videoSrc: 'assets/video/an-unknown-reality.mp4',
+      youtubeId: 'S9nD2x1E3ZM',
       desc: 'A short film probing the nature of memory and perception — what we choose to remember, and what we cannot escape.',
       gallery: []
     },
     'day-one': {
       title: 'Day One', category: 'narrative', year: '2024',
-      videoSrc: 'assets/video/day-one.mp4',
+      youtubeId: 'Q7kYQ4TyIAA',
       desc: 'A narrative short following the first day of a new beginning — capturing the fragile optimism of starting over.',
       gallery: [
         'assets/photos/projects/day-one/Screenshot 2026-02-25 110613.png',
@@ -125,6 +133,15 @@
   const closeBtn = overlay.querySelector('.modal-close');
   const backBtn = overlay.querySelector('.modal-back');
   const content = overlay.querySelector('.modal-content');
+
+  function makeYouTubeEmbed(id) {
+    return '<iframe'
+      + ' src="https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1"'
+      + ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"'
+      + ' allowfullscreen'
+      + ' style="width:100%;height:100%;border:0;border-radius:var(--border-radius);"'
+      + '></iframe>';
+  }
 
   function openModal(slug) {
     const data = PROJECT_DATA[slug];
@@ -147,10 +164,20 @@
       }
     }
 
-    // Render video
+    // Render video — YouTube preferred, fallback to local, fallback to coming soon
     const videoArea = overlay.querySelector('.modal-video');
     if (videoArea) {
-      if (data.videoSrc) {
+      if (data.youtubeIds && data.youtubeIds.length > 0) {
+        // Multiple YouTube videos (e.g. Battle Ready) — stack them
+        videoArea.innerHTML = data.youtubeIds.map(function(id, i) {
+          var style = i > 0
+            ? 'width:100%;aspect-ratio:16/9;margin-top:1rem;'
+            : 'width:100%;height:100%;';
+          return '<div style="' + style + '">' + makeYouTubeEmbed(id) + '</div>';
+        }).join('');
+      } else if (data.youtubeId) {
+        videoArea.innerHTML = makeYouTubeEmbed(data.youtubeId);
+      } else if (data.videoSrc) {
         videoArea.innerHTML = '<video src="' + data.videoSrc + '" controls playsinline style="width:100%;height:100%;border-radius:var(--border-radius);"></video>';
       } else {
         videoArea.innerHTML = '<span style="color:var(--text-muted);font-size:var(--text-small)">Video coming soon</span>';
@@ -165,6 +192,9 @@
   }
 
   function closeModal() {
+    // Stop YouTube playback on close by resetting iframe src
+    overlay.querySelectorAll('iframe').forEach(function(f) { f.src = f.src; });
+
     overlay.classList.remove('modal-overlay--open');
     document.body.style.overflow = '';
     history.replaceState(null, '', window.location.pathname + window.location.search);
