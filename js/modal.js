@@ -4,6 +4,14 @@
     'moving-voice': {
       title: 'Moving Voice', category: 'commercial', year: '2025',
       youtubeId: 'kuCdgSZbR2I',
+      gallery: [
+        'assets/photos/projects/moving-voice/still_5s.jpg',
+        'assets/photos/projects/moving-voice/still_15s.jpg',
+        'assets/photos/projects/moving-voice/still_25s.jpg',
+        'assets/photos/projects/moving-voice/still_40s.jpg',
+        'assets/photos/projects/moving-voice/still_55s.jpg',
+        'assets/photos/projects/moving-voice/still_70s.jpg'
+      ],
       desc: 'A community-driven brand film for Moving Voice, a spoken word and movement collective based in London. Directed and produced end to end — capturing the raw energy of live performance and the voices behind the movement.',
       gallery: []
     },
@@ -28,6 +36,14 @@
     'wedding-eve-james': {
       title: 'Eve & James Wedding', category: 'commercial', year: '2025',
       youtubeId: '4TPe8yL7JUI',
+      gallery: [
+        'assets/photos/projects/wedding-eve-james/still_10s.jpg',
+        'assets/photos/projects/wedding-eve-james/still_30s.jpg',
+        'assets/photos/projects/wedding-eve-james/still_60s.jpg',
+        'assets/photos/projects/wedding-eve-james/still_90s.jpg',
+        'assets/photos/projects/wedding-eve-james/still_120s.jpg',
+        'assets/photos/projects/wedding-eve-james/still_180s.jpg'
+      ],
       desc: 'A cinematic wedding film for Eve and James. Shot across a full day — from the quiet morning preparations to the last dance — with an emphasis on emotion and atmosphere.',
       gallery: []
     },
@@ -51,7 +67,6 @@
     },
     'frankie': {
       title: 'Frankie', category: 'narrative', year: '2024',
-      videoSrc: 'assets/video/frankie.mp4',
       desc: 'A narrative short film following Frankie through a day of quiet revelations. A character-driven piece exploring identity, routine and the moments in between.',
       gallery: [
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111423.png',
@@ -117,6 +132,10 @@
     'an-unknown-reality': {
       title: 'An Unknown Reality', category: 'narrative', year: '2023',
       youtubeId: 'S9nD2x1E3ZM',
+      gallery: [
+        'https://img.youtube.com/vi/S9nD2x1E3ZM/maxresdefault.jpg',
+        'https://img.youtube.com/vi/S9nD2x1E3ZM/hqdefault.jpg'
+      ],
       desc: 'A short film probing the nature of memory and perception — what we choose to remember, and what we cannot escape.',
       gallery: []
     },
@@ -180,12 +199,13 @@
     const videoArea = overlay.querySelector('.modal-video');
     if (videoArea) {
       if (data.youtubeIds && data.youtubeIds.length > 0) {
-        videoArea.innerHTML = data.youtubeIds.map(function(id, i) {
-          var style = i > 0
-            ? 'width:100%;aspect-ratio:16/9;margin-top:1rem;'
-            : 'width:100%;height:100%;';
-          return '<div style="' + style + '">' + makeYouTubeEmbed(id) + '</div>';
-        }).join('');
+        videoArea.style.aspectRatio = 'unset';
+        videoArea.style.height = 'auto';
+        videoArea.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">'
+          + data.youtubeIds.map(function(id) {
+            return '<div style="aspect-ratio:16/9;overflow:hidden;border-radius:var(--border-radius);">' + makeYouTubeEmbed(id) + '</div>';
+          }).join('')
+          + '</div>';
       } else if (data.youtubeId) {
         videoArea.innerHTML = makeYouTubeEmbed(data.youtubeId);
       } else if (data.videoSrc) {
