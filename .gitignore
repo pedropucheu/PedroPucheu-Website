@@ -32,3 +32,6 @@ assets/video/day-one.mp4
 assets/video/celebration-of-life.mp4
 assets/video/responsibility.mp4
 assets/video/an-unknown-reality.mp4
+assets/video/*.mp4
+assets/video/*.mov
+assets/video/*.webm
