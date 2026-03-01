@@ -12,8 +12,7 @@
         'assets/photos/projects/moving-voice/still_55s.jpg',
         'assets/photos/projects/moving-voice/still_70s.jpg'
       ],
-      desc: 'A community-driven brand film for Moving Voice, a spoken word and movement collective based in London. Directed and produced end to end — capturing the raw energy of live performance and the voices behind the movement.',
-      gallery: []
+      desc: 'A community-driven brand film for Moving Voice, a spoken word and movement collective based in London. Directed and produced end to end — capturing the raw energy of live performance and the voices behind the movement.'
     },
     'delphine': {
       title: 'Delphine', category: 'commercial', year: '2024',
@@ -44,8 +43,7 @@
         'assets/photos/projects/wedding-eve-james/still_120s.jpg',
         'assets/photos/projects/wedding-eve-james/still_180s.jpg'
       ],
-      desc: 'A cinematic wedding film for Eve and James. Shot across a full day — from the quiet morning preparations to the last dance — with an emphasis on emotion and atmosphere.',
-      gallery: []
+      desc: 'A cinematic wedding film for Eve and James. Shot across a full day — from the quiet morning preparations to the last dance — with an emphasis on emotion and atmosphere.'
     },
     'able-physiotherapy': {
       title: 'Able Physiotherapy', category: 'commercial', year: '2025',
