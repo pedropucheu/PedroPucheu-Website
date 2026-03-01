@@ -43,6 +43,7 @@
     },
     'frankie': {
       title: 'Frankie', category: 'narrative', year: '2024',
+      videoSrc: 'assets/video/frankie.mp4',
       desc: 'A narrative short film following Frankie through a day of quiet revelations. A character-driven piece exploring identity, routine and the moments in between.',
       gallery: [
         'assets/photos/projects/frankie/Screenshot 2026-02-25 111423.png',
@@ -53,6 +54,7 @@
     },
     'celebration-of-life': {
       title: 'A Celebration of Life', category: 'narrative', year: '2024',
+      videoSrc: 'assets/video/celebration-of-life.mp4',
       desc: "A short documentary celebrating life's defining moments — told through a tapestry of intimate interviews and observational footage.",
       gallery: [
         'assets/photos/projects/celebration-of-life/Screenshot 2023-03-19 144456.jpg',
@@ -63,6 +65,7 @@
     },
     'responsibility': {
       title: 'Responsibility', category: 'narrative', year: '2024',
+      videoSrc: 'assets/video/responsibility.mp4',
       desc: 'A narrative short film examining the weight of personal responsibility. Dark, atmospheric and character-driven.',
       gallery: [
         'assets/photos/projects/responsibility/Screenshot 2026-02-25 110044.png',
@@ -73,6 +76,7 @@
     },
     'yan-texeira': {
       title: 'Yan Texeira', category: 'narrative', year: '2025',
+      videoSrc: 'assets/video/yan-texeira.mp4',
       desc: 'A documentary portrait of Yan Texeira — tracing his journey, craft and vision. An intimate look at an artist at work.',
       gallery: [
         'assets/photos/projects/yan-texeira/Screenshot 2026-02-25 112506.png',
