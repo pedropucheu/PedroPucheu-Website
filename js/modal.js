@@ -83,6 +83,7 @@
     },
     'the-projectionist': {
       title: 'The Projectionist', category: 'narrative', year: '2023',
+      videoSrc: 'assets/video/the-projectionist.mp4',
       desc: 'A short film exploring the quiet obsession of a projectionist — where the boundary between story and storyteller begins to blur.',
       gallery: [
         'assets/photos/projects/the-projectionist/Screenshot 2026-02-25 111954.png',
@@ -93,11 +94,13 @@
     },
     'an-unknown-reality': {
       title: 'An Unknown Reality', category: 'narrative', year: '2023',
+      videoSrc: 'assets/video/an-unknown-reality.mp4',
       desc: 'A short film probing the nature of memory and perception — what we choose to remember, and what we cannot escape.',
       gallery: []
     },
     'day-one': {
       title: 'Day One', category: 'narrative', year: '2024',
+      videoSrc: 'assets/video/day-one.mp4',
       desc: 'A narrative short following the first day of a new beginning — capturing the fragile optimism of starting over.',
       gallery: [
         'assets/photos/projects/day-one/Screenshot 2026-02-25 110613.png',
@@ -137,6 +140,16 @@
           img.loading = 'lazy';
           galleryEl.appendChild(img);
         });
+      }
+    }
+
+    // Render video
+    const videoArea = overlay.querySelector('.modal-video');
+    if (videoArea) {
+      if (data.videoSrc) {
+        videoArea.innerHTML = '<video src="' + data.videoSrc + '" controls playsinline style="width:100%;height:100%;border-radius:var(--border-radius);"></video>';
+      } else {
+        videoArea.innerHTML = '<span style="color:var(--text-muted);font-size:var(--text-small)">Video coming soon</span>';
       }
     }
 
