@@ -89,7 +89,12 @@
 }
 .stills-sidebar__nav a.active {
   color: var(--text-dark);
-  font-weight: 600;
+}
+/* Pre-reserve bold space so clicking active never shifts layout */
+.stills-sidebar__nav a {
+  font-weight: 500;
+  display: inline-block;
+  min-width: max-content;
 }
 
 .stills-sidebar__copy {

@@ -236,3 +236,12 @@
   color: var(--text-primary);
 }
 
+
+/* Prevent nav layout shift on click — fix letter-spacing/weight jumps */
+.nav__links li {
+  display: flex;
+}
+.nav__link {
+  display: inline-block;
+  white-space: nowrap;
+}
