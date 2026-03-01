@@ -57,209 +57,210 @@
       </div>
     </nav>
 
-    <main class="work-layout">
-      <aside class="work-sidebar">
-        <div class="work-sidebar__inner">
-          <h1 class="work-sidebar__name">Pedro<br/>Pucheu</h1>
-          <p class="work-sidebar__role">Filmmaker &amp; Photographer</p>
-          <p class="work-sidebar__bio">Film, documentary and commercial work — crafted with a cinematic eye.</p>
-          <nav class="work-sidebar__nav">
+    <main class="stills-layout">
+      <!-- Sidebar — identical structure to stills -->
+      <aside class="stills-sidebar">
+        <div class="stills-sidebar__inner">
+          <h1 class="stills-sidebar__name">Pedro<br/>Pucheu</h1>
+          <p class="stills-sidebar__role">Filmmaker &amp; Photographer</p>
+          <p class="stills-sidebar__bio">Film, documentary and commercial work — crafted with a cinematic eye.</p>
+          <nav class="stills-sidebar__nav">
             <a href="index.html">Home</a>
             <a href="work.html" class="active">Work</a>
             <a href="about.html">About</a>
             <a href="stills.html">Stills</a>
             <a href="contact.html">Contact</a>
           </nav>
-          <div class="work-sidebar__filters">
+          <div class="work-filters" style="margin-top:var(--space-md);display:flex;flex-direction:column;gap:0.4rem;">
             <button class="filter-pill filter-pill--active" data-filter="all">All</button>
             <button class="filter-pill" data-filter="commercial">Commercial</button>
             <button class="filter-pill" data-filter="narrative">Narrative &amp; Doc</button>
           </div>
-          <p class="work-sidebar__copy">&copy; 2026 Pedro Pucheu</p>
+          <p class="stills-sidebar__copy">&copy; 2026 Pedro Pucheu</p>
         </div>
       </aside>
-      <section class="work-grid-area">
-        <div class="project-grid" data-animate>
-          <article class="project-card" data-category="commercial" data-slug="moving-voice">
-            <div class="project-card__thumb">
+      <section class="videos-grid">
+        <div class="videos-grid__inner">
+          <div class="video-card" data-category="commercial" data-slug="moving-voice">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/moving-voice.webp" alt="Moving Voice" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Moving Voice</h3>
-                <p class="project-card__subtitle">Commercial · 2025</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="delphine">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">Moving Voice</h3>
+              <p class="video-card__sub">Commercial · 2025</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="delphine">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/delphine.webp" alt="Delphine" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Delphine</h3>
-                <p class="project-card__subtitle">Commercial · 2024</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="homegrwn">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">Delphine</h3>
+              <p class="video-card__sub">Commercial · 2024</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="homegrwn">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/homegrwn.webp" alt="HomeGrwn" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">HomeGrwn</h3>
-                <p class="project-card__subtitle">Commercial · 2023</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="streetvox">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/streetvox.webp" alt="StreetVox" loading="lazy" />
+            <div class="video-card__info">
+              <h3 class="video-card__title">HomeGrwn</h3>
+              <p class="video-card__sub">Commercial · 2023</p>
             </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">StreetVox</h3>
-                <p class="project-card__subtitle">Commercial · 2026</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="wedding-eve-james">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/wedding-eve-james.webp" alt="Eve & James Wedding" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Eve &amp; James Wedding</h3>
-                <p class="project-card__subtitle">Commercial · 2025</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="able-physiotherapy">
-            <div class="project-card__thumb">
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="able-physiotherapy">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/able-physiotherapy.webp" alt="Able Physiotherapy" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Able Physiotherapy</h3>
-                <p class="project-card__subtitle">Commercial · 2025</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="frankie">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/frankie.webp" alt="Frankie" loading="lazy" />
+            <div class="video-card__info">
+              <h3 class="video-card__title">Able Physiotherapy</h3>
+              <p class="video-card__sub">Commercial · 2025</p>
             </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Frankie</h3>
-                <p class="project-card__subtitle">Narrative · 2024</p>
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="wedding-eve-james">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/wedding-eve-james.webp" alt="Eve & James Wedding" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="celebration-of-life">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/celebration-of-life.webp" alt="A Celebration of Life" loading="lazy" />
+            <div class="video-card__info">
+              <h3 class="video-card__title">Eve & James Wedding</h3>
+              <p class="video-card__sub">Commercial · 2025</p>
             </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">A Celebration of Life</h3>
-                <p class="project-card__subtitle">Narrative · 2024</p>
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="streetvox">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/streetvox.webp" alt="StreetVox" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="responsibility">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/responsibility.webp" alt="Responsibility" loading="lazy" />
+            <div class="video-card__info">
+              <h3 class="video-card__title">StreetVox</h3>
+              <p class="video-card__sub">Commercial · 2026</p>
             </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Responsibility</h3>
-                <p class="project-card__subtitle">Narrative · 2024</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="yan-texeira">
-            <div class="project-card__thumb">
-              <img src="assets/thumbnails/yan-texeira.webp" alt="Yan Texeira" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Yan Texeira</h3>
-                <p class="project-card__subtitle">Narrative · 2025</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="anderson-silva">
-            <div class="project-card__thumb">
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="anderson-silva">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/anderson-silva.jpg" alt="Anderson Silva Event" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Anderson Silva Event</h3>
-                <p class="project-card__subtitle">Commercial · 2025</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="commercial" data-slug="battle-ready">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">Anderson Silva Event</h3>
+              <p class="video-card__sub">Commercial · 2025</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="commercial" data-slug="battle-ready">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/battle-ready.jpg" alt="Battle Ready" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Battle Ready</h3>
-                <p class="project-card__subtitle">Commercial · 2025</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="the-projectionist">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">Battle Ready</h3>
+              <p class="video-card__sub">Commercial · 2025</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="responsibility">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/responsibility.webp" alt="Responsibility" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <h3 class="video-card__title">Responsibility</h3>
+              <p class="video-card__sub">Narrative · 2024</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="celebration-of-life">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/celebration-of-life.webp" alt="A Celebration of Life" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <h3 class="video-card__title">A Celebration of Life</h3>
+              <p class="video-card__sub">Narrative · 2024</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="yan-texeira">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/yan-texeira.webp" alt="Yan Texeira" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <h3 class="video-card__title">Yan Texeira</h3>
+              <p class="video-card__sub">Narrative · 2025</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="frankie">
+            <div class="video-card__thumb">
+              <img src="assets/thumbnails/frankie.webp" alt="Frankie" loading="lazy" />
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-card__info">
+              <h3 class="video-card__title">Frankie</h3>
+              <p class="video-card__sub">Narrative · 2024</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="the-projectionist">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/the-projectionist.jpg" alt="The Projectionist" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">The Projectionist</h3>
-                <p class="project-card__subtitle">Narrative · 2023</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="an-unknown-reality">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">The Projectionist</h3>
+              <p class="video-card__sub">Narrative · 2023</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="an-unknown-reality">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/an-unknown-reality.jpg" alt="An Unknown Reality" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">An Unknown Reality</h3>
-                <p class="project-card__subtitle">Narrative · 2023</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
-          <article class="project-card" data-category="narrative" data-slug="day-one">
-            <div class="project-card__thumb">
+            <div class="video-card__info">
+              <h3 class="video-card__title">An Unknown Reality</h3>
+              <p class="video-card__sub">Narrative · 2023</p>
+            </div>
+          </div>
+          <div class="video-card" data-category="narrative" data-slug="day-one">
+            <div class="video-card__thumb">
               <img src="assets/thumbnails/day-one.jpg" alt="Day One" loading="lazy" />
-            </div>
-            <div class="project-card__overlay">
-              <div class="project-card__meta">
-                <h3 class="project-card__title">Day One</h3>
-                <p class="project-card__subtitle">Narrative · 2024</p>
+              <div class="video-card__play">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
             </div>
-          </article>
-
+            <div class="video-card__info">
+              <h3 class="video-card__title">Day One</h3>
+              <p class="video-card__sub">Narrative · 2024</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

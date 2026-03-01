@@ -175,7 +175,7 @@
     }, 500);
   }
 
-  document.querySelectorAll('.project-card').forEach(function (card) {
+  document.querySelectorAll('.video-card, .project-card').forEach(function (card) {
     card.addEventListener('click', function () {
       openModal(card.dataset.slug);
     });

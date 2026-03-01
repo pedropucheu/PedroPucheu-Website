@@ -1,7 +1,7 @@
 /* Filter pills for work page */
 (function () {
-  const pills = document.querySelectorAll('.filter-pill');
-  const cards = document.querySelectorAll('.project-card');
+  const pills = document.querySelectorAll('.filter-pill, .work-filters .filter-pill');
+  const cards = document.querySelectorAll('.video-card');
 
   pills.forEach(function (pill) {
     pill.addEventListener('click', function () {
