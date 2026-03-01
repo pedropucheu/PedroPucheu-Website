@@ -362,11 +362,11 @@
 
 /* ===== SELECTED WORKS — Cormorant Garamond (two words only) ===== */
 .section-title--cormorant {
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
-  font-weight: 300;
+  font-family: var(--font-display) !important;
+  font-weight: 400;
   font-size: clamp(3rem, 6vw, 5.5rem);
-  letter-spacing: 0.02em;
-  text-transform: none;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
   color: #ffffff !important;
 }
 
